@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 .page {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,11 @@
       height: 712px;
       align-items: flex-end;
       background: linear-gradient(90deg, rgb(32 32 32 / 40%) 49.04%, rgb(32 32 32 / 0%) 100%), url("../../images/1-block.png") lightgray 50% / cover no-repeat;
+
+      .mobile-screen({
+        align-items: flex-start;
+        height: auto;
+      });
     }
 
     &_links {
@@ -93,6 +100,10 @@
   &__content {
     padding: 70px 100px;
 
+    .mobile-screen({
+      padding: 30px 40px;
+    });
+
     &_centered {
       max-width: 1024px;
       margin: 0 auto;
@@ -105,6 +116,10 @@
       justify-content: center;
       padding: 20px 10px;
       gap: 10px;
+      .mobile-screen({
+        padding: 20px 40px;
+      });
+
     }
 
     &_video {

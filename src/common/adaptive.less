@@ -1,0 +1,7 @@
+@mobile-screen-breakpoint: 1024px;
+
+.mobile-screen(@rules) {
+  @media screen and (max-width: (@mobile-screen-breakpoint - 1)) {
+    @rules();
+  }
+}

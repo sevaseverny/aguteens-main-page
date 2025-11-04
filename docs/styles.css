@@ -338,6 +338,12 @@ html {
   align-items: flex-end;
   background: linear-gradient(90deg, rgba(32, 32, 32, 0.4) 49.04%, rgba(32, 32, 32, 0) 100%), url(da905fb5aa48fa92471b.png) lightgray 50% / cover no-repeat;
 }
+@media screen and (max-width: 1023px) {
+  .page__block_main {
+    align-items: flex-start;
+    height: auto;
+  }
+}
 .page__block_links {
   background: #DB1933;
 }
@@ -405,6 +411,11 @@ html {
 .page__content {
   padding: 70px 100px;
 }
+@media screen and (max-width: 1023px) {
+  .page__content {
+    padding: 30px 40px;
+  }
+}
 .page__content_centered {
   max-width: 1024px;
   margin: 0 auto;
@@ -416,6 +427,11 @@ html {
   justify-content: center;
   padding: 20px 10px;
   gap: 10px;
+}
+@media screen and (max-width: 1023px) {
+  .page__content_small {
+    padding: 20px 40px;
+  }
 }
 .page__content_video {
   padding: 10px 0;
@@ -482,14 +498,25 @@ html {
   line-height: 90%;
   /* 82.8px */
 }
+@media screen and (max-width: 1023px) {
+  .block-main__header {
+    font-size: 40px;
+  }
+}
 .block-main__counter {
   display: flex;
   flex: 1 0 0;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-  padding: 90px 0 70px 210px ;
+  padding: 90px 0 70px 210px;
   gap: 30px;
+}
+@media screen and (max-width: 1023px) {
+  .block-main__counter {
+    padding: 60px 60px 70px 170px;
+    flex-direction: column;
+  }
 }
 .block-main__counter__count-wrapper {
   display: flex;
@@ -503,6 +530,11 @@ html {
   font-weight: 600;
   line-height: normal;
 }
+@media screen and (max-width: 1023px) {
+  .block-main__counter__count {
+    font-size: 36px;
+  }
+}
 .block-main__counter__persons {
   font-family: HelveticaNeueCyr-Light, sans-serif;
   font-size: 24px;
@@ -510,6 +542,11 @@ html {
   font-weight: 400;
   line-height: 90%;
   text-align: center;
+}
+@media screen and (max-width: 1023px) {
+  .block-main__counter__persons {
+    font-size: 16px;
+  }
 }
 .block-main__counter__text {
   width: 229px;
@@ -520,9 +557,26 @@ html {
   line-height: 90%;
   text-align: center;
 }
+@media screen and (max-width: 1023px) {
+  .block-main__counter__text {
+    width: auto;
+    font-size: 16px;
+  }
+}
 .block-main__preview {
   display: flex;
   gap: 69px;
+}
+@media screen and (max-width: 1023px) {
+  .block-main__preview {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .block-main__preview__button {
+    display: flex;
+    align-items: center;
+  }
 }
 .block-main__preview__text {
   font-family: HelveticaNeueCyr-Light, sans-serif;
@@ -530,6 +584,11 @@ html {
   font-style: normal;
   font-weight: 300;
   line-height: 90%;
+}
+@media screen and (max-width: 1023px) {
+  .block-main__preview__text {
+    font-size: 18px;
+  }
 }
 
 .block-links {
@@ -1129,6 +1188,13 @@ html {
   gap: 10px;
   text-decoration: none;
 }
+@media screen and (max-width: 1023px) {
+  .buy-button {
+    height: 47px;
+    border-radius: 35px;
+    padding: 0 15px 0 19px;
+  }
+}
 .buy-button__text {
   display: flex;
   align-items: center;
@@ -1146,6 +1212,13 @@ html {
   /* 19.8px */
   text-align: left;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1023px) {
+  .buy-button__text {
+    border-left: 1px dashed #FFF;
+    font-size: 11px;
+    padding: 7px 0 7px 7px;
+  }
 }
 
 .block-bottom {
@@ -1262,7 +1335,7 @@ html {
   transition: all 0.2s ease-in-out;
 }
 .header_scrolled {
-  min-height: 30px;
+  min-height: 70px;
   backdrop-filter: blur(5px);
   background: rgba(219, 25, 51, 0.8);
   transition: all 0.4s ease-in-out;
@@ -1288,8 +1361,19 @@ html {
   transition: all 0.3s linear;
 }
 .header__logo__agu_scrolled {
-  top: 20px;
+  top: 26px;
   width: 99px;
+}
+@media screen and (max-width: 1023px) {
+  .header__logo__agu {
+    top: 86px;
+    left: -88px;
+    width: 105px;
+  }
+  .header__logo__agu_scrolled {
+    top: 26px;
+    width: 99px;
+  }
 }
 .header__logo__arcs {
   position: absolute;
@@ -1303,9 +1387,22 @@ html {
   transition: all 0.3s linear;
 }
 .header__logo__arcs_scrolled {
-  top: 11px;
+  top: 14px;
   left: 24px;
-  width: 47px;
+  height: 47px;
+}
+@media screen and (max-width: 1023px) {
+  .header__logo__arcs {
+    top: 29px;
+    width: 149px;
+    height: 163px;
+    left: -70px;
+  }
+  .header__logo__arcs_scrolled {
+    top: 11px;
+    left: 24px;
+    width: 47px;
+  }
 }
 .header__logo__family {
   position: absolute;
@@ -1318,9 +1415,21 @@ html {
   transition: all 0.3s linear;
 }
 .header__logo__family_scrolled {
-  top: 37px;
+  top: 43px;
   left: -58px;
   width: 50px;
+}
+@media screen and (max-width: 1023px) {
+  .header__logo__family {
+    top: 103px;
+    left: -43px;
+    width: 58px;
+  }
+  .header__logo__family_scrolled {
+    top: 43px;
+    left: -58px;
+    width: 50px;
+  }
 }
 .header__logo__forum {
   position: absolute;
@@ -1333,19 +1442,32 @@ html {
   transition: all 0.3s linear;
 }
 .header__logo__forum_scrolled {
-  top: 38px;
+  top: 43px;
   left: -6px;
   width: 30px;
 }
+@media screen and (max-width: 1023px) {
+  .header__logo__forum {
+    top: 114px;
+    left: -23px;
+    width: 36px;
+  }
+  .header__logo__forum_scrolled {
+    top: 43px;
+    left: -6px;
+    width: 30px;
+  }
+}
 .header__links {
   display: flex;
-  padding: 10px 0;
+  height: 70px;
+  align-items: center;
   gap: 20px;
 }
 .header__link {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 38px;
 }
 .header__link_menu {
   background: url(276d9304ff6563bf2ea4.svg) no-repeat;

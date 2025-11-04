@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -18,7 +20,7 @@
   transition: all 0.2s ease-in-out;
 
   &_scrolled {
-    min-height: 30px;
+    min-height: 70px;
     backdrop-filter: blur(5px);
     background: rgb(219 25 51 / 80%);
     transition: all 0.4s ease-in-out;
@@ -29,7 +31,7 @@
     max-width: 1024px;
     justify-content: space-between;
     padding: 0 100px;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   &__logo {
@@ -46,9 +48,20 @@
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 20px;
+        top: 26px;
         width: 99px;
       }
+
+      .mobile-screen({
+        top: 86px;
+        left: -88px;
+        width: 105px;
+
+        &_scrolled {
+          top: 26px;
+          width: 99px;
+        }
+      });
     }
 
     &__arcs {
@@ -63,10 +76,23 @@
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 11px;
+        top: 14px;
         left: 24px;
-        width: 47px;
+        height: 47px;
       }
+
+      .mobile-screen({
+        top: 29px;
+        width: 149px;
+        height: 163px;
+        left: -70px;
+
+        &_scrolled {
+          top: 11px;
+          left: 24px;
+          width: 47px;
+        }
+      });
     }
 
     &__family {
@@ -80,10 +106,22 @@
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 37px;
+        top: 43px;
         left: -58px;
         width: 50px;
       }
+
+      .mobile-screen({
+        top: 103px;
+        left: -43px;
+        width: 58px;
+
+        &_scrolled {
+          top: 43px;
+          left: -58px;
+          width: 50px;
+        }
+      });
     }
 
     &__forum {
@@ -97,23 +135,36 @@
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 38px;
+        top: 43px;
         left: -6px;
         width: 30px;
       }
+
+      .mobile-screen({
+        top: 114px;
+        left: -23px;
+        width: 36px;
+
+        &_scrolled {
+          top: 43px;
+          left: -6px;
+          width: 30px;
+        }
+      });
     }
   }
 
   &__links {
     display: flex;
-    padding: 10px 0;
+    height: 70px;
+    align-items: center;
     gap: 20px;
   }
 
   &__link {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 38px;
 
     &_menu {
       background: url("../../icons/burger.svg") no-repeat;
