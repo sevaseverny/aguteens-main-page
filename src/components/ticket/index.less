@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  .mobile-screen({
+    width: 100%;
+  });
+
   &__link {
     display: flex;
     width: 347px;
@@ -21,6 +25,11 @@
       background: linear-gradient(108deg, rgb(219 25 51 / 80%) 0%, rgb(219 25 51 / 0%) 99.51%) 50%;
       text-decoration: none;
     }
+
+    .mobile-screen({
+      box-sizing: border-box;
+      width: 100%;
+    });
   }
 
   &__head {

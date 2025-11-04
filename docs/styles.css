@@ -1080,6 +1080,11 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 1023px) {
+  .ticket {
+    width: 100%;
+  }
+}
 .ticket__link {
   display: flex;
   width: 347px;
@@ -1095,6 +1100,12 @@ html {
   border-radius: 30px;
   background: linear-gradient(108deg, rgba(219, 25, 51, 0.8) 0%, rgba(219, 25, 51, 0) 99.51%) 50%;
   text-decoration: none;
+}
+@media screen and (max-width: 1023px) {
+  .ticket__link {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 .ticket__head {
   display: flex;
