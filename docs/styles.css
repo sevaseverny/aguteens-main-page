@@ -523,8 +523,9 @@ html {
 }
 @media screen and (max-width: 1023px) {
   .block-main__counter {
-    padding: 60px 60px 70px 170px;
+    padding: 60px 0 70px 170px;
     flex-direction: column;
+    width: 150px;
   }
 }
 .block-main__counter__count-wrapper {
