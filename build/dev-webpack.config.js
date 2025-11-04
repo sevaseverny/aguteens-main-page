@@ -52,7 +52,6 @@ module.exports = {
             extensions: ['js', 'ts'],
         }),
         new StylelintPlugin({
-            fix: true,
             extensions: ['.less'],
         }),
         new HtmlWebpackPlugin({
