@@ -506,9 +506,11 @@ html {
   letter-spacing: -1.84px;
   line-height: 90%;
   /* 82.8px */
+  width: 600px;
 }
 @media screen and (max-width: 1023px) {
   .block-main__header {
+    width: auto;
     font-size: 40px;
   }
 }
@@ -526,6 +528,7 @@ html {
     padding: 60px 0 70px 170px;
     flex-direction: column;
     width: 150px;
+    max-width: calc(100% - 230px);
   }
 }
 .block-main__counter__count-wrapper {

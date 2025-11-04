@@ -5,6 +5,7 @@
   color: #FFF;
 
   &__header {
+    width: 600px;
     margin-bottom: 35px;
     font-size: 92px;
     font-style: normal;
@@ -13,6 +14,7 @@
     line-height: 90%; /* 82.8px */
 
     .mobile-screen({
+      width: auto;
       font-size: 40px;
     });
   }
@@ -30,6 +32,7 @@
       padding: 60px 0 70px 170px;
       flex-direction: column;
       width: 150px;
+      max-width: calc(100% - 230px);
     });
 
     &__count-wrapper {
