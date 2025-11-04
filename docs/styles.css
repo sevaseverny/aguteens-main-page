@@ -326,8 +326,8 @@ html {
 
 .page {
   display: flex;
-  flex-direction: column;
   min-width: 360px;
+  flex-direction: column;
 }
 .page__block {
   position: relative;
@@ -1672,7 +1672,7 @@ html {
 @media screen and (max-width: 1023px) {
   .header__logo__agu {
     top: 86px;
-    left: 12px;
+    left: -8px;
     width: 105px;
   }
   .header__logo__agu_scrolled {
@@ -1702,7 +1702,7 @@ html {
     top: 29px;
     width: 149px;
     height: 163px;
-    left: 30px;
+    left: 10px;
   }
   .header__logo__arcs_scrolled {
     top: 11px;
@@ -1728,7 +1728,7 @@ html {
 @media screen and (max-width: 1023px) {
   .header__logo__family {
     top: 103px;
-    left: 57px;
+    left: 37px;
     width: 58px;
   }
   .header__logo__family_scrolled {
@@ -1755,7 +1755,7 @@ html {
 @media screen and (max-width: 1023px) {
   .header__logo__forum {
     top: 114px;
-    left: 77px;
+    left: 57px;
     width: 36px;
   }
   .header__logo__forum_scrolled {
