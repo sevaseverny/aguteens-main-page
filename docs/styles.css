@@ -1208,6 +1208,11 @@ html {
   flex-flow: row nowrap;
   gap: 10px;
 }
+@media screen and (max-width: 1023px) {
+  .block-review__cards {
+    overflow-x: scroll;
+  }
+}
 .block-review__card {
   position: relative;
   overflow: hidden;
