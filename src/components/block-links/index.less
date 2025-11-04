@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 .block-links {
   color: #FFF;
   font-family:  HelveticaNeueCyr-UltraLight, sans-serif;
@@ -5,6 +7,11 @@
   font-style: normal;
   font-weight: 300;
   line-height: 90%;
+  text-align: center;
+
+  .mobile-screen({
+    font-size: 16px;
+  });
 
   a {
     color: #FFF;

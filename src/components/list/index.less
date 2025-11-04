@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 .list {
   display: flex;
   overflow: hidden;
@@ -20,6 +22,11 @@
     font-weight: 700;
     line-height: 120%; /* 28.8px */
 
+    .mobile-screen({
+      font-size: 16px;
+      padding: 12px 10px 12px 20px;
+    });
+
     &::after {
       display: block;
       width: 20px;
@@ -30,6 +37,9 @@
       background-repeat: no-repeat;
       content: '';
       cursor: pointer;
+      .mobile-screen({
+        padding: 6px;
+      });
     }
 
     &_opened {
@@ -53,8 +63,16 @@
     line-height: 120%; /* 21.6px */
     transition: max-height 0.2s linear;
 
+    .mobile-screen({
+      font-size: 14px;
+    });
+
     &__content {
       padding: 20px 20px 20px 30px;
+
+      .mobile-screen({
+        padding: 12px 10px 12px 20px;
+      })
     }
 
     &_opened {

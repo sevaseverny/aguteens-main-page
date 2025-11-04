@@ -1,5 +1,16 @@
+@import url("../../common/adaptive");
+
 .horizontal-scroll {
   position: relative;
+
+  &__cards {
+    padding: 50px;
+    margin: -50px -100px;
+
+    .mobile-screen({
+      margin: -50px -30px;
+    })
+  }
 
   &__control {
     position: absolute;
@@ -12,6 +23,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;
+
+    .mobile-screen({
+      display: none;
+    });
 
     &:hover {
       opacity: 1;

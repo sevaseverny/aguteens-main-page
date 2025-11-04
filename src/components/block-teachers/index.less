@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 .block-teachers {
   &__top {
     display: flex;
@@ -5,6 +7,10 @@
     justify-content: space-between;
     margin: 0 auto;
     gap: 20px;
+
+    .mobile-screen({
+      gap: 60px;
+    });
   }
 
   &__title {
@@ -15,6 +21,11 @@
     font-style: normal;
     font-weight: 900;
     line-height: 90%; /* 43.2px */
+
+    .mobile-screen({
+      font-size: 32px;
+      margin-bottom: 66px;
+    });
   }
 
   &__text {
@@ -26,15 +37,22 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
+
+    .mobile-screen({
+      font-size: 16px;
+      margin-bottom: 66px;
+    });
   }
 
   &__cards {
     display: flex;
     overflow: hidden;
     flex-flow: row nowrap;
-    padding: 50px;
-    margin: -50px -100px;
     gap: 10px;
+
+    .mobile-screen({
+      overflow-x: scroll;
+    });
   }
 
   &__card {
@@ -45,10 +63,19 @@
     border-radius: 30px;
     transition: scale 0.3s ease-in-out;
 
+    .mobile-screen({
+      width: 192px;
+      min-width: 192px;
+    });
+
     &:hover {
       z-index: 2;
       background: #DB1933;
       scale: 1.2;
+
+      .mobile-screen({
+        scale: 1.1;
+      });
     }
 
     &__image {
@@ -56,6 +83,11 @@
       height: 240px;
       border-radius: 30px;
       background: lightgray 50% / cover no-repeat;
+
+      .mobile-screen({
+        width: 192px;
+        height: 192px;
+      });
     }
 
     &__title {
@@ -66,6 +98,10 @@
       font-style: normal;
       font-weight: 700;
       line-height: 90%;/* 28.8px */
+
+      .mobile-screen({
+        font-size: 19px;
+      });
     }
 
     &__text {
@@ -75,6 +111,10 @@
       font-style: normal;
       font-weight: 400;
       line-height: 90%; /* 16.2px */
+
+      .mobile-screen({
+        font-size: 14px;
+      });
     }
 
     &__info {

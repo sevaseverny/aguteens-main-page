@@ -1,6 +1,13 @@
+@import url("../../common/adaptive");
+
 .block-offer {
   display: flex;
   gap: 50px;
+
+  .mobile-screen({
+    flex-direction: column;
+    gap: 30px;
+  });
 
   &__text {
     width: 380px;
@@ -11,6 +18,11 @@
     font-weight: 900;
     letter-spacing: -1.44px;
     line-height: 90%; /* 64.8px */;
+
+    .mobile-screen({
+      width: auto;
+      font-size: 32px;
+    });
   }
 
   &__image {
@@ -21,6 +33,12 @@
     border: 10px solid #202020;
     border-radius: 30px;
     background: url('../../images/2-block.png') lightgray 50% / cover no-repeat;
+
+    .mobile-screen({
+      margin-left: 90px;
+      height: 223px;
+      border: 6px solid #202020;
+    });
 
     &__text {
       position: absolute;
@@ -36,6 +54,19 @@
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
+
+      .mobile-screen({
+        box-sizing: border-box;
+        font-size: 14px;
+        width: 163px;
+        height: 98px;
+        opacity: 1;
+        padding: 15px 20px;
+        border-radius: 30px;
+        top: -10px;
+        left: -98px;
+        line-height: 120%;
+      });
     }
   }
 }

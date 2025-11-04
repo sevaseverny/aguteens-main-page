@@ -12,6 +12,7 @@ const CACHE_DURATION = 2000;
 
 const classes = {
     component: 'horizontal-scroll',
+    cards: 'horizontal-scroll__cards',
     control: 'horizontal-scroll__control',
     scrollable: 'horizontal-scroll__scrollable',
     controlLeft: 'horizontal-scroll__control_left',
@@ -82,6 +83,7 @@ export const slowInfiniteScroll = (
     component.classList.add(classes.component);
     element.parentElement.appendChild(component);
     component.appendChild(element);
+    element.classList.add(classes.cards);
 
     if (controls) {
         const prevButton = document.createElement('div');

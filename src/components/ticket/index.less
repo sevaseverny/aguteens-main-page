@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 .ticket {
   border-radius: 30px;
   background-repeat: no-repeat;
@@ -54,6 +56,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 90%; /* 28.8px */
+
+    .mobile-screen({
+      font-size: 22px;
+    });
   }
 
   &__description {
@@ -62,5 +68,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
+
+    .mobile-screen({
+      font-size: 14px;
+    });
   }
 }

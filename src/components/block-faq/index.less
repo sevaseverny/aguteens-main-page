@@ -1,6 +1,13 @@
+@import url("../../common/adaptive");
+
 .block-faq {
   display: flex;
   gap: 10px;
+
+  .mobile-screen({
+    flex-direction: column;
+    gap: 0;
+  });
 
   &__image {
     width: calc(50% - 5px);
@@ -8,6 +15,14 @@
     flex: 1 0 0;
     border-radius: 30px 30px 0;
     background: url('../../images/4-block.png') lightgray 50% / cover no-repeat;
+
+    .mobile-screen({
+      min-width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 30px;
+      margin-bottom: 40px;
+    });
   }
 
   &__content {
@@ -25,10 +40,19 @@
         font-style: normal;
         font-weight: 900;
         line-height: 90%;
+
+        .mobile-screen({
+          font-size: 32px;
+          margin-bottom: 30px;
+        })
       }
 
       &__list {
 
       }
+
+    .mobile-screen({
+      width: 100%;
+    })
   }
 }

@@ -42,13 +42,21 @@
         mask-repeat: no-repeat;
         mask-size: 600px, 600px;
         pointer-events: none;
+
+       .mobile-screen({
+         top: -65px;
+         right: -180px;
+         display: block;
+         width: 600px;
+         height: 600px;
+         mask-size: 500px, 500px;
+        });
       }
     }
 
     &_welcome {
       /* Чтобы шум не убегал за границы блока */
       overflow: hidden;
-      height: 344px;
       background:  url("../../images/3-block(VIDEO).png") lightgray 50% / cover no-repeat;
     }
 
@@ -101,7 +109,7 @@
     padding: 70px 100px;
 
     .mobile-screen({
-      padding: 30px 40px;
+      padding: 40px 30px;
     });
 
     &_centered {
@@ -117,7 +125,7 @@
       padding: 20px 10px;
       gap: 10px;
       .mobile-screen({
-        padding: 20px 40px;
+        padding: 15px 40px;
       });
 
     }
