@@ -23,9 +23,14 @@ import './components/block-bottom';
 import { initList } from './components/list';
 import { slowInfiniteScroll } from './components/horizontal-scroll';
 import { initHeader } from './components/header';
+import { initReplaceImages } from './components/replace-image';
 
 (() => {
     initHeader();
+})();
+
+(() => {
+    initReplaceImages();
 })();
 
 (() => {

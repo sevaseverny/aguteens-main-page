@@ -751,7 +751,7 @@ html {
   height: 517.5px;
   flex: 1 0 0;
   border-radius: 30px 30px 0;
-  background: url(2dc88f31e04c4066ae21.png) lightgray 50% / cover no-repeat;
+  background: lightgray 50% / cover no-repeat;
 }
 @media screen and (max-width: 1023px) {
   .block-faq__image {
@@ -777,11 +777,21 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: 90%;
+  padding-left: 70px;
 }
 @media screen and (max-width: 1023px) {
   .block-faq__content__title {
     font-size: 32px;
     margin-bottom: 30px;
+    padding-left: 0;
+  }
+}
+.block-faq__content__list {
+  border-radius: 0 30px 30px 30px!important;
+}
+@media screen and (max-width: 1023px) {
+  .block-faq__content__list {
+    border-radius: 30px!important;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -839,10 +849,11 @@ html {
   display: flex;
   overflow: hidden;
   flex-flow: row nowrap;
-  gap: 40px;
+  gap: 20px;
 }
 @media screen and (max-width: 1023px) {
   .block-cases__cards {
+    gap: 10px;
     overflow-x: scroll;
   }
 }
@@ -963,7 +974,6 @@ html {
   }
 }
 .block-teachers__card {
-  position: relative;
   z-index: 1;
   width: 240px;
   min-width: 240px;
@@ -1002,7 +1012,7 @@ html {
   margin-bottom: 10px;
   color: #FFF;
   font-family: HelveticaNeueCyr, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 90%;
@@ -1016,7 +1026,7 @@ html {
 .block-teachers__card__text {
   color: #FFF;
   font-family: HelveticaNeueCyr-Light, sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
@@ -1299,6 +1309,8 @@ html {
 .block-video {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .block-video__top {
   margin-bottom: 10px;
@@ -1562,7 +1574,7 @@ html {
   font-weight: 400;
   line-height: 120%;
   /* 21.6px */
-  transition: max-height 0.2s linear;
+  transition: max-height 1s ease-in;
 }
 @media screen and (max-width: 1023px) {
   .list__answer {
@@ -1578,7 +1590,7 @@ html {
   }
 }
 .list__answer_opened {
-  max-height: 1000px;
+  max-height: 500px;
 }
 
 .horizontal-scroll {
@@ -1640,7 +1652,7 @@ html {
   transition: all 0.2s ease-in-out;
 }
 .header_scrolled {
-  min-height: 70px;
+  min-height: 75px;
   backdrop-filter: blur(5px);
   background: rgba(219, 25, 51, 0.8);
   transition: all 0.4s ease-in-out;
@@ -1710,9 +1722,9 @@ html {
     left: 10px;
   }
   .header__logo__arcs_scrolled {
-    top: 11px;
-    left: 84px;
-    width: 47px;
+    top: 14px;
+    left: 85px;
+    height: 47px;
   }
 }
 .header__logo__family {

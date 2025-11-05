@@ -25,7 +25,6 @@ export const initList = (
     const setState = (newState: Partial<typeof state>) => {
         if (newState.openedIndex !== state.openedIndex) {
             state.openedIndex = newState.openedIndex;
-            console.log(state);
             rerender();
         }
     };

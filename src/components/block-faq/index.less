@@ -14,7 +14,7 @@
     height: 517.5px;
     flex: 1 0 0;
     border-radius: 30px 30px 0;
-    background: url('../../images/4-block.png') lightgray 50% / cover no-repeat;
+    background: lightgray 50% / cover no-repeat;
 
     .mobile-screen({
       min-width: 100%;
@@ -33,6 +33,7 @@
 
       &__title {
         width: 300px;
+        padding-left: 70px;
         margin-bottom: 50px;
         color: #202020;
         font-family: HelveticaNeueCyr, sans-serif;
@@ -44,11 +45,15 @@
         .mobile-screen({
           font-size: 32px;
           margin-bottom: 30px;
+          padding-left: 0;
         })
       }
 
       &__list {
-
+        border-radius: 0 30px 30px!important;
+        .mobile-screen({
+          border-radius: 30px!important;
+        })
       }
 
     .mobile-screen({
