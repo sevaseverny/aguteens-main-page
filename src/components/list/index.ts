@@ -1,15 +1,5 @@
 import './index.less';
 
-type TListItem = {
-    // Текст вопроса.
-    question: string;
-
-    // Текст ответа.
-    answer: string;
-};
-
-export type TList = TListItem[];
-
 const classes = {
     component: 'list',
     item: 'list__item',
@@ -26,7 +16,6 @@ const dataAttributes = {
 
 export const initList = (
     element: HTMLDivElement,
-    list: TList,
     openedIndex: number | null = null,
 ) => {
     const state = {
@@ -62,33 +51,6 @@ export const initList = (
 
     element.addEventListener('click', handleToggleItem);
 
-    const render = () => {
-        list.forEach((item, index) => {
-            const row = document.createElement('div');
-
-            const question = document.createElement('div');
-            question.classList.add(classes.question);
-            question.innerText = item.question;
-            question.setAttribute(dataAttributes.index, `${index}`);
-
-            const answer = document.createElement('div');
-            answer.classList.add(classes.answer);
-            answer.setAttribute(dataAttributes.index, `${index}`);
-
-            const answerContent = document.createElement('div');
-            answerContent.classList.add(classes.answerContent);
-            answerContent.innerText = item.answer;
-
-            answer.appendChild(answerContent);
-
-            row.appendChild(question);
-            row.appendChild(answer);
-            element.appendChild(row);
-        });
-
-        element.classList.add(classes.component);
-    };
-
     const rerender = (): void => {
         Array
             .from(element.getElementsByClassName(classes.answerOpened))
@@ -107,6 +69,5 @@ export const initList = (
         }
     };
 
-    render();
     rerender();
 };
