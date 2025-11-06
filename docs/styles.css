@@ -770,6 +770,7 @@ html {
 }
 .block-faq__content__title {
   width: 300px;
+  padding-left: 70px;
   margin-bottom: 50px;
   color: #202020;
   font-family: HelveticaNeueCyr, sans-serif;
@@ -777,7 +778,6 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: 90%;
-  padding-left: 70px;
 }
 @media screen and (max-width: 1023px) {
   .block-faq__content__title {
@@ -787,7 +787,7 @@ html {
   }
 }
 .block-faq__content__list {
-  border-radius: 0 30px 30px 30px!important;
+  border-radius: 0 30px 30px!important;
 }
 @media screen and (max-width: 1023px) {
   .block-faq__content__list {
@@ -1308,8 +1308,8 @@ html {
 
 .block-video {
   position: relative;
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
 }
 .block-video__top {
@@ -1760,7 +1760,7 @@ html {
   left: 29px;
   width: 47px;
   height: 11px;
-  background: url(2d30871e5646060c29e2.svg) no-repeat;
+  background: url(8b7dbe96b5790b8e7c7d.svg) no-repeat;
   background-size: contain;
   transition: all 0.3s linear;
 }
