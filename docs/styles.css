@@ -867,6 +867,7 @@ html {
   border-radius: 30px;
   background: lightgray 50% / cover no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 @media screen and (max-width: 1023px) {
   .block-cases__card {
@@ -926,31 +927,31 @@ html {
   height: 409px;
   border-radius: 36px;
   margin-bottom: 40px;
-  background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .block-cases__modal__title {
-  font-family: HelveticaNeueCyr, sans-serif;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 90%;
-  letter-spacing: 0;
   margin-bottom: 20px;
+  font-family: HelveticaNeueCyr, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 90%;
 }
 .block-cases__modal__text {
   font-family: HelveticaNeueCyr-Light, sans-serif;
-  font-weight: 400;
   font-size: 21.6px;
-  line-height: 90%;
+  font-weight: 400;
   letter-spacing: 0;
+  line-height: 90%;
 }
 .block-cases__modal__description {
   font-family: HelveticaNeueCyr-Light, sans-serif;
-  font-weight: 400;
   font-size: 24px;
-  line-height: 120%;
+  font-weight: 400;
   letter-spacing: 0;
+  line-height: 120%;
 }
 
 .block-teachers__top {
@@ -1015,6 +1016,7 @@ html {
   min-width: 240px;
   border-radius: 30px;
   transition: scale 0.3s ease-in-out;
+  cursor: pointer;
 }
 @media screen and (max-width: 1023px) {
   .block-teachers__card {
@@ -1087,31 +1089,31 @@ html {
   height: 409px;
   border-radius: 36px;
   margin-bottom: 40px;
-  background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .block-teachers__modal__title {
-  font-family: HelveticaNeueCyr, sans-serif;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 90%;
-  letter-spacing: 0;
   margin-bottom: 20px;
+  font-family: HelveticaNeueCyr, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 90%;
 }
 .block-teachers__modal__text {
   font-family: HelveticaNeueCyr-Light, sans-serif;
-  font-weight: 400;
   font-size: 21.6px;
-  line-height: 90%;
+  font-weight: 400;
   letter-spacing: 0;
+  line-height: 90%;
 }
 .block-teachers__modal__description {
   font-family: HelveticaNeueCyr-Light, sans-serif;
-  font-weight: 400;
   font-size: 24px;
-  line-height: 120%;
+  font-weight: 400;
   letter-spacing: 0;
+  line-height: 120%;
 }
 
 .block-tickets__top {
@@ -1879,14 +1881,14 @@ html {
 
 .modal {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  z-index: 1000;
   top: 0;
   left: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
   display: flex;
+  width: 100%;
+  height: 100%;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 .modal__content {
   position: relative;
@@ -1895,8 +1897,8 @@ html {
 }
 .modal__close {
   position: absolute;
-  right: -88px;
   top: -60px;
+  right: -88px;
   display: block;
   width: 32px;
   height: 32px;
