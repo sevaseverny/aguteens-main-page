@@ -24,6 +24,7 @@ import { initList } from './components/list';
 import { slowInfiniteScroll } from './components/horizontal-scroll';
 import { initHeader } from './components/header';
 import { initReplaceImages } from './components/replace-image';
+import { initModal } from './components/modal';
 
 (() => {
     initHeader();
@@ -31,6 +32,9 @@ import { initReplaceImages } from './components/replace-image';
 
 (() => {
     initReplaceImages();
+})();
+(() => {
+    initModal();
 })();
 
 (() => {
