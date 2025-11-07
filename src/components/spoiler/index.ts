@@ -44,12 +44,17 @@ export const initSpoiler = (
         const content = element.querySelector(`.${classes.content}`);
         const title = element.querySelector(`.${classes.title}`);
 
-        if (state.isOpened) {
-            content.classList.add(classes.contentOpened);
-            title.classList.add(classes.titleOpened);
+        if (!(content instanceof HTMLElement)) {
             return;
         }
 
+        if (state.isOpened) {
+            content.classList.add(classes.contentOpened);
+            title.classList.add(classes.titleOpened);
+            content.style.height = `${content.scrollHeight}px`;
+            return;
+        }
+        content.style.height = '0';
         content.classList.remove(classes.contentOpened);
         title.classList.remove(classes.titleOpened);
     };

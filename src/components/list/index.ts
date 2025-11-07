@@ -53,11 +53,16 @@ export const initList = (
     const rerender = (): void => {
         Array
             .from(element.getElementsByClassName(classes.answerOpened))
-            .forEach((elem) => elem.classList.remove(classes.answerOpened));
+            .forEach((elem) => {
+                elem.classList.remove(classes.answerOpened);
+                (elem as HTMLElement).style.height = '0px';
+            });
 
         Array
             .from(element.getElementsByClassName(classes.questionOpened))
-            .forEach((elem) => elem.classList.remove(classes.questionOpened));
+            .forEach((elem) => {
+                elem.classList.remove(classes.questionOpened);
+            });
 
         if (state.openedIndex !== null) {
             const question = element.querySelector(`.${classes.question}[${dataAttributes.index}='${state.openedIndex}']`);
@@ -65,6 +70,7 @@ export const initList = (
 
             const answer = element.querySelector(`.${classes.answer}[${dataAttributes.index}='${state.openedIndex}']`);
             answer.classList.add(classes.answerOpened);
+            (answer as HTMLElement).style.height = `${answer.scrollHeight}px`;
         }
     };
 

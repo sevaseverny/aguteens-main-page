@@ -2,32 +2,32 @@
 
 .spoiler {
   &__title {
-    width: 100%;
-    cursor: pointer;
-    text-align: center;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     font-family: HelveticaNeueCyr-Light, sans-serif;
-    font-weight: 550;
     font-size: 22px;
-    line-height: 120%;
-    letter-spacing: 0;
+    font-weight: 550;
     gap: 10px;
+    letter-spacing: 0;
+    line-height: 120%;
+    text-align: center;
 
 
     &::before {
-      box-sizing: border-box;
       display: inline-block;
       width: 32px;
       height: 32px;
+      box-sizing: border-box;
       background-color: #202020;
       background-repeat: no-repeat;
       content: ' ';
-      mask-repeat: no-repeat;
+      cursor: pointer;
       mask-image: url('../../icons/down.svg');
       mask-position: center;
-      cursor: pointer;
+      mask-repeat: no-repeat;
 
       .mobile-screen({
         padding: 6px;
@@ -42,11 +42,12 @@
   }
 
   &__content {
-    display: none;
-    margin-top: 53px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
 
     &_opened {
-      display: block;
+      height: auto;
     }
   }
 }

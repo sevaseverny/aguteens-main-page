@@ -53,7 +53,7 @@
 
   &__answer {
     overflow: hidden;
-    max-height: 0;
+    height: 0;
     box-sizing: border-box;
     color: #000;
     font-family: HelveticaNeueCyr-Light, sans-serif;
@@ -61,7 +61,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 21.6px */
-    transition: max-height 1s ease-in;
+    transition: height 0.3s ease-in-out;
 
     .mobile-screen({
       font-size: 14px;
@@ -72,11 +72,12 @@
 
       .mobile-screen({
         padding: 12px 10px 12px 20px;
-      })
+      });
     }
 
     &_opened {
-      max-height: 500px;
+      height: auto;
+      transition: height 0.3s ease-in-out;
     }
   }
 }
