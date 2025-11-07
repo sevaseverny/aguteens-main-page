@@ -7,6 +7,7 @@ const attributes = {
 
 const classes = {
     component: 'modal',
+    wrapper: 'modal__wrapper',
     dialog: 'modal__dialog',
     close: 'modal__close',
     control: 'modal__control',
@@ -91,16 +92,13 @@ export const initModal = () => {
         modal.classList.add(classes.component);
         modal.style.backgroundColor = modalColor;
 
-        const dialog = document.createElement('div');
-        elements.dialog = dialog;
-        dialog.classList.add(classes.dialog);
-        modal.appendChild(dialog);
+        const wrapper = document.createElement('div');
+        wrapper.classList.add(classes.wrapper);
+        modal.appendChild(wrapper);
 
         const close = document.createElement('div');
         close.classList.add(classes.close);
-        dialog.appendChild(close);
-
-        dialog.appendChild(modalContent);
+        wrapper.appendChild(close);
 
         if (elements.modals.length > 1) {
             const prevButton = document.createElement('div');
@@ -109,9 +107,16 @@ export const initModal = () => {
             const nextButton = document.createElement('div');
             nextButton.classList.add(classes.control, classes.controlRight);
 
-            dialog.appendChild(prevButton);
-            dialog.appendChild(nextButton);
+            wrapper.appendChild(prevButton);
+            wrapper.appendChild(nextButton);
         }
+
+        const dialog = document.createElement('div');
+        elements.dialog = dialog;
+        dialog.classList.add(classes.dialog);
+        wrapper.appendChild(dialog);
+
+        dialog.appendChild(modalContent);
 
         document.body.appendChild(modal);
 
@@ -128,6 +133,7 @@ export const initModal = () => {
         if (target !== elements.close) {
             return;
         }
+
         // Возвращаем контент модалки на место.
         elements.modalsContainer.innerHTML = '';
         elements.modals.forEach((modalContent) => elements.modalsContainer.appendChild(modalContent));

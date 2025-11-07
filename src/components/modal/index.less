@@ -1,3 +1,5 @@
+@import url("../../common/adaptive");
+
 .modal {
   position: fixed;
   z-index: 1000;
@@ -9,10 +11,24 @@
   align-items: center;
   backdrop-filter: blur(10px);
 
-  &__dialog{
+  &__wrapper {
     position: relative;
     width: 824px;
+    max-width: 100%;
     margin: 0 auto;
+
+    .mobile-screen({
+      top: 0;
+      margin: 64px;
+      bottom: 100px;
+    });
+  }
+
+  &__dialog {
+    .mobile-screen({
+      overflow: scroll;
+      height: calc(100vh - 128px);
+    })
   }
 
   &__close {
@@ -25,6 +41,11 @@
     background-image: url("../../icons/x.svg");
     background-size: cover;
     cursor: pointer;
+
+    .mobile-screen({
+      top: -17px;
+      right: -50px;
+    });
   }
 
   &__control {
@@ -40,6 +61,9 @@
     background-size: 64px;
     cursor: pointer;
     opacity: 0.5;
+    .mobile-screen({
+      padding: 0;
+    });
 
     &:hover {
       opacity: 1;
@@ -48,11 +72,19 @@
     &_right {
       right: -96px;
       transform: rotate(-90deg);
+
+      .mobile-screen({
+        right: -64px;
+      });
     }
 
     &_left {
       left: -96px;
       transform: rotate(90deg);
+
+      .mobile-screen({
+        left: -64px;
+      });
     }
   }
 }

@@ -121,6 +121,10 @@
     color: #fff;
     gap: 53px;
 
+    .mobile-screen({
+      flex-direction: column;
+    });
+
     &__image {
       width: 409px;
       height: 409px;
@@ -129,6 +133,12 @@
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: cover;
+
+      .mobile-screen({
+        width: 100%;
+        aspect-ratio: 1/1;
+        height: auto;
+      });
     }
 
     &__title {
