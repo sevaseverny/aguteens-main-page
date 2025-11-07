@@ -15,15 +15,15 @@
 
   &__title {
     margin-bottom: 60px;
-    color: #FFF;
-    font-family: HelveticaNeueCyr, sans-serif;
-    font-size: 48px;
+    color: var(--font-color-light);
+    font-family: var(--font-main);
+    font-size: var(--font-size-xxxxl);
     font-style: normal;
     font-weight: 900;
     line-height: 90%; /* 43.2px */
 
     .mobile-screen({
-      font-size: 32px;
+      font-size: var(--font-size-xxxl);
       margin-bottom: 40px;
     });
   }
@@ -31,15 +31,15 @@
   &__text {
     width: 429px;
     margin-bottom: 60px;
-    color: #FFF;
-    font-family: HelveticaNeueCyr-Light, sans-serif;
-    font-size: 24px;
+    color: var(--font-color-light);
+    font-family: var(--font-light);
+    font-size: var(--font-size-xxl);
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
 
     .mobile-screen({
-      font-size: 16px;
+      font-size: var(--font-size-m);
       margin-bottom: 40px;
     });
   }
@@ -63,7 +63,7 @@
     min-width: 360px;
     height: 360px;
     border: 10px solid #FFF;
-    border-radius: 30px;
+    border-radius: var(--border-radius-default);
     background: lightgray 50% / cover no-repeat;
     background-size: cover;
     cursor: pointer;
@@ -76,28 +76,28 @@
 
     &__title {
       margin-bottom: 10px;
-      color: #FFF;
-      font-family: HelveticaNeueCyr, sans-serif;
-      font-size: 32px;
+      color: var(--font-color-light);
+      font-family: var(--font-main);
+      font-size: var(--font-size-xxxl);
       font-style: normal;
       font-weight: 700;
       line-height: 90%;/* 28.8px */
 
       .mobile-screen({
-        font-size: 22px;
+        font-size: var(--font-size-xl);
       });
     }
 
     &__text {
-      color: #FFF;
-      font-family: HelveticaNeueCyr-Light, sans-serif;
-      font-size: 18px;
+      color: var(--font-color-light);
+      font-family: var(--font-light);
+      font-size: var(--font-size-l);
       font-style: normal;
       font-weight: 400;
       line-height: 90%; /* 16.2px */
 
       .mobile-screen({
-        font-size: 12px;
+        font-size: var(--font-size-xs);
       });
     }
 
@@ -108,7 +108,7 @@
       left: 0;
       padding: 20px;
       background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, #000 100%);
-      color: #fff;
+      color: var(--font-color-light);
     }
 
     &:hover &__info {
@@ -118,7 +118,7 @@
 
   &__modal {
     display: flex;
-    color: #fff;
+    color: var(--font-color-light);
     gap: 53px;
 
     .mobile-screen({
@@ -143,15 +143,15 @@
 
     &__title {
       margin-bottom: 20px;
-      font-family: HelveticaNeueCyr, sans-serif;
-      font-size: 48px;
+      font-family: var(--font-main);
+      font-size: var(--font-size-xxxxl);
       font-weight: 900;
       letter-spacing: 0;
       line-height: 90%;
     }
 
     &__text {
-      font-family: HelveticaNeueCyr-Light, sans-serif;
+      font-family: var(--font-light);
       font-size: 21.6px;
       font-weight: 400;
       letter-spacing: 0;
@@ -159,8 +159,8 @@
     }
 
     &__description {
-      font-family: HelveticaNeueCyr-Light, sans-serif;
-      font-size: 24px;
+      font-family: var(--font-light);
+      font-size: var(--font-size-xxl);
       font-weight: 400;
       letter-spacing: 0;
       line-height: 120%;

@@ -1,4 +1,12 @@
-@mobile-screen-breakpoint: 1024px;
+@tablet-screen-breakpoint: 1024px;
+
+@mobile-screen-breakpoint: 768px;
+
+.tablet-screen(@rules) {
+  @media screen and (max-width: (@tablet-screen-breakpoint - 1)) {
+    @rules();
+  }
+}
 
 .mobile-screen(@rules) {
   @media screen and (max-width: (@mobile-screen-breakpoint - 1)) {

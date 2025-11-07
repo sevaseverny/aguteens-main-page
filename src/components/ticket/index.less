@@ -1,7 +1,7 @@
 @import url("../../common/adaptive");
 
 .ticket {
-  border-radius: 30px;
+  border-radius: var(--border-radius-default);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -11,21 +11,25 @@
     height: 171px;
     flex-direction: column;
     padding: 20px 30px 30px;
-    border-radius: 30px;
+    border-radius: var(--border-radius-default);
     background: linear-gradient(107deg, rgb(32 32 32 / 80%) -1.68%, rgb(32 32 32 / 0%) 100%);
-    color: #FFF;
+    color: var(--font-color-light);
     text-decoration: none;
 
     &:hover {
-      border-radius: 30px;
+      border-radius: var(--border-radius-default);
       background: linear-gradient(108deg, rgb(219 25 51 / 80%) 0%, rgb(219 25 51 / 0%) 99.51%) 50%;
       text-decoration: none;
     }
 
+    .tablet-screen({
+      width: 420px;
+    });
+
     .mobile-screen({
       box-sizing: border-box;
       width: 100%;
-      max-width: 350px;
+      max-width: 420px;
     });
   }
 
@@ -35,8 +39,8 @@
   }
 
   &__type {
-    font-family: HelveticaNeueCyr-Light, sans-serif;
-    font-size: 12px;
+    font-family: var(--font-light);
+    font-size: var(--font-size-xs);
     font-style: normal;
     font-weight: 550;
     letter-spacing: 4.8px;
@@ -44,8 +48,8 @@
   }
 
   &__price {
-    font-family: Oswald, sans-serif;
-    font-size: 32px;
+    font-family: var(--font-oswald);
+    font-size: var(--font-size-xxxl);
     font-style: normal;
     font-weight: 600;
     line-height: 90%; /* 28.8px */
@@ -57,26 +61,26 @@
 
   &__title {
     margin-bottom: 10px;
-    font-family: HelveticaNeueCyr, sans-serif;
-    font-size: 32px;
+    font-family: var(--font-main);
+    font-size: var(--font-size-xxxl);
     font-style: normal;
     font-weight: 700;
     line-height: 90%; /* 28.8px */
 
     .mobile-screen({
-      font-size: 22px;
+      font-size: var(--font-size-xl);
     });
   }
 
   &__description {
-    font-family: HelveticaNeueCyr-Light, sans-serif;
-    font-size: 18px;
+    font-family: var(--font-light);
+    font-size: var(--font-size-l);
     font-style: normal;
     font-weight: 400;
     line-height: 90%;
 
     .mobile-screen({
-      font-size: 14px;
+      font-size: var(--font-size-s);
     });
   }
 }

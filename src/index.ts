@@ -1,3 +1,4 @@
+import './common/root.less';
 import './common/normalize.less';
 import './common/fonts.less';
 

@@ -17,8 +17,8 @@
     flex-direction: column;
     align-self: stretch;
     justify-content: center;
-    color: #FFF;
-    font-family: HelveticaNeueCyr, sans-serif;
+    color: var(--font-color-light);
+    font-family: var(--font-main);
     font-size: 80px;
     font-style: normal;
     font-weight: 900;
@@ -26,7 +26,7 @@
     line-height: 90%; /* 72px */
 
     .mobile-screen({
-      font-size: 32px;
+      font-size: var(--font-size-xxxl);
       width: 200px;
       height: 124px;
     });
@@ -46,7 +46,7 @@
   &__modal {
     &__video {
       overflow: hidden;
-      border-radius: 30px;
+      border-radius: var(--border-radius-default);
     }
   }
 }

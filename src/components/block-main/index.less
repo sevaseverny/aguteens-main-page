@@ -2,19 +2,24 @@
 
 .block-main {
   height: 100%;
-  color: #FFF;
+  color: var(--font-color-light);
 
   &__header {
     width: 600px;
     margin-bottom: 35px;
-    font-size: 92px;
+    font-family: var(--font-heawy);
+    font-size: var(--font-size-xxxxxxl);
     font-style: normal;
     font-weight: 900;
     letter-spacing: -1.84px;
     line-height: 90%; /* 82.8px */
 
-    .mobile-screen({
+    .tablet-screen({
+      font-size: 64px;
       width: auto;
+    });
+
+    .mobile-screen({
       font-size: 40px;
     });
   }
@@ -42,7 +47,7 @@
     }
 
     &__count{
-      font-family: Oswald, sans-serif;
+      font-family: var(--font-oswald);
       font-size: 56px;
       font-style: normal;
       font-weight: 600;
@@ -54,22 +59,23 @@
     }
 
     &__persons {
-      font-family: HelveticaNeueCyr-Light, sans-serif;
-      font-size: 24px;
+      font-family: var(--font-light);
+      font-size: var(--font-size-xxl);
       font-style: normal;
       font-weight: 400;
       line-height: 90%;
       text-align: center;
 
+
       .mobile-screen({
-        font-size: 16px;
+        font-size: var(--font-size-m);
       });
     }
 
     &__text {
       width: 229px;
-      font-family: HelveticaNeueCyr-Light, sans-serif;
-      font-size: 24px;
+      font-family: var(--font-light);
+      font-size: var(--font-size-xxl);
       font-style: normal;
       font-weight: 400;
       line-height: 90%;
@@ -77,7 +83,7 @@
 
       .mobile-screen({
         width: auto;
-        font-size: 16px;
+        font-size: var(--font-size-m);
       });
     }
   }
@@ -100,14 +106,18 @@
 
 
   &__preview__text {
-    font-family: HelveticaNeueCyr-Light, sans-serif;
-    font-size: 32px;
+    font-family: var(--font-light);
+    font-size: var(--font-size-xxxl);
     font-style: normal;
     font-weight: 300;
     line-height: 90%;
 
+    .tablet-screen({
+      font-size: var(--font-size-xxl);
+    });
+
     .mobile-screen({
-      font-size: 18px;
+      font-size: var(--font-size-l);
     });
   }
 }

@@ -11,9 +11,9 @@
 
   &__text {
     width: 380px;
-    color: #202020;
+    color: var(--font-color-dark);
     font-family: HelveticaMedium, sans-serif;
-    font-size: 72px;
+    font-size: var(--font-size-xxxxxl);
     font-style: normal;
     font-weight: 900;
     letter-spacing: -1.44px;
@@ -21,7 +21,7 @@
 
     .mobile-screen({
       width: auto;
-      font-size: 32px;
+      font-size: var(--font-size-xxxl);
     });
   }
 
@@ -30,14 +30,14 @@
     z-index: 1;
     height: 275px;
     flex-grow: 1;
-    border: 10px solid #202020;
-    border-radius: 30px;
+    border: 10px solid var(--color-secondary);
+    border-radius: var(--border-radius-default);
     background: url('../../images/2-block.png') lightgray 50% / cover no-repeat;
 
     .mobile-screen({
       margin-left: 90px;
       height: 223px;
-      border: 6px solid #202020;
+      border: 6px solid var(--color-secondary);
     });
 
     &__text {
@@ -46,23 +46,23 @@
       left: -80px;
       width: 154px;
       padding: 25px 30px;
-      border-radius: 30px;
-      background: #202020;
-      color: #FFF;
-      font-family: HelveticaNeueCyr-Light, sans-serif;
-      font-size: 18px;
+      border-radius: var(--border-radius-default);
+      background: var(--color-secondary);
+      color: var(--font-color-light);
+      font-family: var(--font-light);
+      font-size: var(--font-size-l);
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
 
       .mobile-screen({
         box-sizing: border-box;
-        font-size: 14px;
+        font-size: var(--font-size-s);
         width: 163px;
         height: 98px;
         opacity: 1;
         padding: 15px 20px;
-        border-radius: 30px;
+        border-radius: var(--border-radius-default);
         top: -10px;
         left: -98px;
         line-height: 120%;

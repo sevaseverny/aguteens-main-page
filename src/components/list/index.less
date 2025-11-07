@@ -4,7 +4,7 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  border-radius: 30px;
+  border-radius: var(--border-radius-default);
   gap: 2px;
 
   &__question {
@@ -14,16 +14,16 @@
     align-self: stretch;
     justify-content: space-between;
     padding: 20px 20px 20px 30px;
-    background: #78516C;
-    color: #FFF;
-    font-family: HelveticaNeueCyr, sans-serif;
-    font-size: 24px;
+    background: var(--color-primary);;
+    color: var(--font-color-light);
+    font-family: var(--font-main);
+    font-size: var(--font-size-xxl);
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 28.8px */
 
     .mobile-screen({
-      font-size: 16px;
+      font-size: var(--font-size-m);
       padding: 12px 10px 12px 20px;
     });
 
@@ -43,7 +43,7 @@
     }
 
     &_opened {
-      background: #DB1933;
+      background: var(--color-danger);
 
       &::after {
         transform: rotate(180deg);
@@ -56,15 +56,15 @@
     height: 0;
     box-sizing: border-box;
     color: #000;
-    font-family: HelveticaNeueCyr-Light, sans-serif;
-    font-size: 18px;
+    font-family: var(--font-light);
+    font-size: var(--font-size-l);
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 21.6px */
     transition: height 0.3s ease-in-out;
 
     .mobile-screen({
-      font-size: 14px;
+      font-size: var(--font-size-s);
     });
 
     &__content {
