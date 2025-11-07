@@ -1015,8 +1015,8 @@ html {
   width: 240px;
   min-width: 240px;
   border-radius: 30px;
-  transition: scale 0.3s ease-in-out;
   cursor: pointer;
+  transition: scale 0.3s ease-in-out;
 }
 @media screen and (max-width: 1023px) {
   .block-teachers__card {
@@ -1306,6 +1306,11 @@ html {
   border-radius: 30px;
   background: lightgray 50% / cover no-repeat;
   background-size: cover;
+  cursor: pointer;
+}
+.block-review__modal__video {
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 .block-partners__top {
@@ -1688,7 +1693,8 @@ html {
   padding: 20px;
   background-image: url(7b3fde5007595c182aa0.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 64px;
+  background-position: center;
   opacity: 0.5;
 }
 @media screen and (max-width: 1023px) {
@@ -1890,7 +1896,7 @@ html {
   align-items: center;
   backdrop-filter: blur(10px);
 }
-.modal__content {
+.modal__dialog {
   position: relative;
   width: 824px;
   margin: 0 auto;
@@ -1905,6 +1911,31 @@ html {
   background-image: url(48a0fe675971a840689e.svg);
   background-size: cover;
   cursor: pointer;
+}
+.modal__control {
+  position: absolute;
+  z-index: 100;
+  top: calc(50% - 64px);
+  width: 64px;
+  height: 64px;
+  padding: 20px;
+  background-image: url(7b3fde5007595c182aa0.svg);
+  background-repeat: no-repeat;
+  background-size: 64px;
+  background-position: center;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.modal__control:hover {
+  opacity: 1;
+}
+.modal__control_right {
+  right: -96px;
+  transform: rotate(-90deg);
+}
+.modal__control_left {
+  left: -96px;
+  transform: rotate(90deg);
 }
 .modals_hidden {
   display: none;
