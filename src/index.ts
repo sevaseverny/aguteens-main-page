@@ -19,6 +19,7 @@ import './components/block-video';
 import './components/footer';
 import './components/buy-button';
 import './components/block-bottom';
+import './components/bg-video';
 
 import { initList } from './components/list';
 import { slowInfiniteScroll } from './components/horizontal-scroll';
