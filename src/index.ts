@@ -22,11 +22,13 @@ import './components/block-bottom';
 import './components/bg-video';
 import './components/play-button';
 
+
 import { initList } from './components/list';
 import { slowInfiniteScroll } from './components/horizontal-scroll';
 import { initHeader } from './components/header';
 import { initReplaceImages } from './components/replace-image';
 import { initModal } from './components/modal';
+import { initSpoiler } from './components/spoiler';
 
 (() => {
     initHeader();
@@ -35,8 +37,13 @@ import { initModal } from './components/modal';
 (() => {
     initReplaceImages();
 })();
+
 (() => {
     initModal();
+})();
+
+(() => {
+    initSpoiler(document.querySelector('.spoiler'));
 })();
 
 (() => {

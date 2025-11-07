@@ -706,8 +706,8 @@ html {
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
   min-height: 340px;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1023px) {
   .block-welcome {
@@ -738,8 +738,8 @@ html {
 }
 .block-welcome__buttons {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 .block-welcome__top {
   display: flex;
@@ -1207,11 +1207,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (max-width: 1023px) {
-  .ticket {
-    width: 100%;
-  }
-}
 .ticket__link {
   display: flex;
   width: 347px;
@@ -1232,6 +1227,7 @@ html {
   .ticket__link {
     box-sizing: border-box;
     width: 100%;
+    max-width: 350px;
   }
 }
 .ticket__head {
@@ -1652,12 +1648,12 @@ html {
 }
 
 .play-button {
-  appearance: none;
-  background-image: url(32cccadc4dd117a102d7.svg);
-  height: 64px;
   width: 64px;
-  background-color: #0000;
+  height: 64px;
   border: none;
+  appearance: none;
+  background-color: #0000;
+  background-image: url(32cccadc4dd117a102d7.svg);
   background-size: 64px;
   cursor: pointer;
 }
@@ -1667,6 +1663,13 @@ html {
     width: 40px;
     background-size: 40px;
   }
+}
+
+.spoiler__content {
+  display: none;
+}
+.spoiler__content_opened {
+  display: block;
 }
 
 .list {
