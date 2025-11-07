@@ -1,5 +1,15 @@
 @import url("../../common/adaptive");
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .modal {
   position: fixed;
   z-index: 1000;
@@ -10,6 +20,7 @@
   height: 100%;
   align-items: center;
   backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease-in;
 
   &__wrapper {
     position: relative;
