@@ -20,6 +20,7 @@ import './components/footer';
 import './components/buy-button';
 import './components/block-bottom';
 import './components/bg-video';
+import './components/play-button';
 
 import { initList } from './components/list';
 import { slowInfiniteScroll } from './components/horizontal-scroll';

@@ -4,7 +4,12 @@
   position: relative;
   z-index: 2;
   display: flex;
+  min-height: 340px;
   justify-content: space-between;
+
+  .mobile-screen({
+    min-height: 120px;
+  });
 
   &__text {
     display: flex;
@@ -27,9 +32,21 @@
     });
   }
 
-  &__button {
+  &__buttons {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__modal {
+    &__video {
+      overflow: hidden;
+      border-radius: 30px;
+    }
   }
 }

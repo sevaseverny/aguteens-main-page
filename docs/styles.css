@@ -707,6 +707,12 @@ html {
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  min-height: 340px;
+}
+@media screen and (max-width: 1023px) {
+  .block-welcome {
+    min-height: 120px;
+  }
 }
 .block-welcome__text {
   display: flex;
@@ -730,10 +736,18 @@ html {
     height: 124px;
   }
 }
-.block-welcome__button {
+.block-welcome__buttons {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  justify-content: flex-end;
+}
+.block-welcome__top {
+  display: flex;
+  justify-content: end;
+}
+.block-welcome__modal__video {
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 .block-faq {
@@ -1623,15 +1637,35 @@ html {
 .bg-video {
   position: absolute;
   z-index: 1;
-  top: -30vh;
+  top: -55vh;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   aspect-ratio: 1 / 1;
 }
 @media screen and (max-width: 1023px) {
   .bg-video {
-    top: -42vh;
+    height: 130%;
+    top: -15%;
+    bottom: -15%;
+  }
+}
+
+.play-button {
+  appearance: none;
+  background-image: url(32cccadc4dd117a102d7.svg);
+  height: 64px;
+  width: 64px;
+  background-color: #0000;
+  border: none;
+  background-size: 64px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1023px) {
+  .play-button {
+    height: 40px;
+    width: 40px;
+    background-size: 40px;
   }
 }
 
