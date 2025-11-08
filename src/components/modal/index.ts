@@ -18,7 +18,7 @@ const classes = {
 /**
  * Инициализация модальных окон.
  */
-export const initModal = () => {
+export const initModalListeners = () => {
     const elements: {
         /**
          * Элемент модального окна.
@@ -59,22 +59,50 @@ export const initModal = () => {
         modals:[],
     };
 
-    const handleOpen = (event: MouseEvent) => {
-        const { target } = event;
-        if (!(target instanceof HTMLElement)) {
-            return;
+    /**
+     * Состояние компонента.
+     */
+    let state = {
+        // Признак, что он открыт.
+        isOpen: false,
+
+        // Цвет задника.
+        backgroundColor: '',
+
+        // Квери селектор модального окна.
+        contentQuery: '',
+
+        // Индекс контента модального окна в коллекции окон.
+        index: 0,
+    };
+
+    /**
+     * Изменение состояния компонента.
+     * @param newState
+     */
+    const setState = (newState: Partial<typeof state>) => {
+        const updatedState: typeof state = {
+            ...state,
+            ...newState,
+        };
+
+        if (JSON.stringify(updatedState) !== JSON.stringify(state)) {
+            if (!state.isOpen && newState.isOpen) {
+                state = updatedState;
+                render();
+            } else {
+                state = updatedState;
+                rerender();
+            }
         }
+    };
 
-        const element = target.closest(`[${attributes.modalContent}]`);
-
-        if (!element) {
-            return;
-        }
-
-        const modalColor = element.getAttribute(attributes.modalBgColor);
-        const modalContentQuery = element.getAttribute(attributes.modalContent);
-
-        const modalContent = document.body.querySelector(modalContentQuery);
+    /**
+     * Первичная отрисовка компонента.
+     */
+    const render = () => {
+        // Если открыли модалку.
+        const modalContent = document.body.querySelector(state.contentQuery);
 
         if (!modalContent) {
             return;
@@ -84,13 +112,14 @@ export const initModal = () => {
             return;
         }
 
+
         elements.modalsContainer = modalContent.parentElement;
         elements.modals = Array.from(modalContent.parentElement.children);
         elements.content = modalContent;
 
         const modal = document.createElement('div');
         modal.classList.add(classes.component);
-        modal.style.backgroundColor = modalColor;
+        modal.style.backgroundColor = state.backgroundColor;
 
         const wrapper = document.createElement('div');
         wrapper.classList.add(classes.wrapper);
@@ -124,6 +153,73 @@ export const initModal = () => {
         elements.close = close;
     };
 
+    /**
+     * Перерисовка компонента.
+     */
+    const rerender = () => {
+        // Если закрыли модалку
+        if (!state.isOpen) {
+            // Возвращаем контент модалки на место.
+            elements.modalsContainer.innerHTML = '';
+            elements.modals.forEach((modalContent) => elements.modalsContainer.appendChild(modalContent));
+            elements.modal.remove();
+            return;
+        }
+
+        elements.dialog.removeChild(elements.content);
+
+        elements.content = elements.modals[state.index];
+        elements.dialog.appendChild(elements.content);
+    };
+
+    /**
+     * Обработчик открытия модального окна.
+     * @param event
+     */
+    const handleOpen = (event: MouseEvent) => {
+        const { target } = event;
+        if (!(target instanceof HTMLElement)) {
+            return;
+        }
+
+        // Элемент, в котором содержится контент модального окна.
+        const element = target.closest(`[${attributes.modalContent}]`);
+
+        if (!element) {
+            return;
+        }
+
+        const modalColor = element.getAttribute(attributes.modalBgColor);
+        const modalContentQuery = element.getAttribute(attributes.modalContent);
+        const modalContent = document.body.querySelector(modalContentQuery);
+
+        if (!modalContent) {
+            return;
+        }
+
+        if (!(modalContent instanceof HTMLElement)) {
+            return;
+        }
+
+        // Позиция контента среди родственных элементов.
+        const currentModalContentIndex = Array
+            .from(modalContent.parentElement.children)
+            .findIndex((child) => child === modalContent);
+
+        if (modalColor && modalContentQuery) {
+            setState({
+                isOpen: true,
+                backgroundColor: modalColor,
+                contentQuery: modalContentQuery,
+                index: currentModalContentIndex,
+            });
+        }
+    };
+
+    /**
+     * Обработчик закрытия модального окна.
+     * @param event
+     */
     const handleClose = (event: MouseEvent) => {
         const { target } = event;
         if (!(target instanceof HTMLElement)) {
@@ -134,12 +230,13 @@ export const initModal = () => {
             return;
         }
 
-        // Возвращаем контент модалки на место.
-        elements.modalsContainer.innerHTML = '';
-        elements.modals.forEach((modalContent) => elements.modalsContainer.appendChild(modalContent));
-        elements.modal.remove();
+        setState({ isOpen: false });
     };
 
+    /**
+     * Обработчик клика по кнопке "ранее".
+     * @param event
+     */
     const handleClickPrev = (event: MouseEvent) =>{
         const { target } = event;
         if( !(target instanceof HTMLElement)) {
@@ -150,19 +247,18 @@ export const initModal = () => {
             return;
         }
 
-        const currentModalContentIndex = elements.modals.findIndex((modalContent) => modalContent === elements.content);
-        const prevModalIndex = currentModalContentIndex === 0
+
+        const prevModalIndex = state.index === 0
             ? elements.modals.length - 1
-            : currentModalContentIndex - 1;
+            : state.index - 1;
 
-        elements.dialog.removeChild(elements.content);
-
-        elements.content = elements.modals[prevModalIndex];
-        elements.dialog.appendChild(elements.content);
-
-
+        setState({index: prevModalIndex});
     };
 
+    /**
+     * Обработчик клика по кнопке "далее".
+     * @param event
+     */
     const handleClickNext = (event: MouseEvent) => {
         const { target } = event;
         if(!(target instanceof HTMLElement)) {
@@ -173,15 +269,11 @@ export const initModal = () => {
             return;
         }
 
-        const currentModalContentIndex = elements.modals.findIndex((modalContent) => modalContent === elements.content);
-        const nextModalIndex = currentModalContentIndex === elements.modals.length - 1
+        const nextModalIndex = state.index === elements.modals.length - 1
             ? 0
-            : currentModalContentIndex + 1;
+            : state.index + 1;
 
-        elements.dialog.removeChild(elements.content);
-
-        elements.content = elements.modals[nextModalIndex];
-        elements.dialog.appendChild(elements.content);
+        setState({ index: nextModalIndex });
     };
 
     document.body.addEventListener('click', handleOpen);

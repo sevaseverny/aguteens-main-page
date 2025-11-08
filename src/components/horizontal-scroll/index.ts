@@ -1,13 +1,28 @@
 import './index.less';
 
+/**
+ * Скорость скролла в пикселях за один шаг.
+ */
 const SCROLL_SPEED = 1;
 
+/**
+ * Задержка между шагами скролла в миллисекундах.
+ */
 const SCROLL_DELAY = 20;
 
+/**
+ * Отступ от края контейнера до элемента при скролле в пикселях.
+ */
 const SCROLL_PADDING = 10;
 
+/**
+ * Количество повторов контента внутри блока прокрутки. Нужно для создания эффекта непрерывности.
+ */
 const REPEAT_COUNT = 10;
 
+/**
+ * Время жизни кэша в миллисекундах.
+ */
 const CACHE_DURATION = 2000;
 
 const classes = {
@@ -29,7 +44,6 @@ const cache = new Map();
  * @param element
  */
 const isVisible = (element: Element) => {
-
     const cached = cache.get(element);
     const now = Date.now();
     if (cached && now - cached.timestamp < CACHE_DURATION) {
@@ -54,7 +68,7 @@ const isVisible = (element: Element) => {
  * @param  [infinite=false] - Флаг, указывающий, нужно ли прокручивать бесконечно.
  * @param controls - Элементы управления прокруткой.
  */
-export const slowInfiniteScroll = (
+export const initInfiniteScroll = (
     element: HTMLDivElement,
     {
         direction,
@@ -66,8 +80,15 @@ export const slowInfiniteScroll = (
         infinite: boolean;
         controls?: boolean;
     }) => {
+
+    /**
+     * Состояние компонента.
+     */
     const state = {
+        // Направление прокрутки.
         direction,
+
+        // Признак, что прокрутка работает.
         isActive: false,
     };
 

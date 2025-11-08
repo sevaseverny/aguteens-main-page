@@ -25,22 +25,22 @@ import './components/play-button';
 
 
 import { initList } from './components/list';
-import { slowInfiniteScroll } from './components/horizontal-scroll';
-import { initHeader } from './components/header';
-import { initReplaceImages } from './components/replace-image';
-import { initModal } from './components/modal';
+import { initInfiniteScroll } from './components/horizontal-scroll';
+import { initHeaderListeners } from './components/header';
+import { initReplaceImageListeners } from './components/replace-image';
+import { initModalListeners } from './components/modal';
 import { initSpoiler } from './components/spoiler';
 
 (() => {
-    initHeader();
+    initHeaderListeners();
 })();
 
 (() => {
-    initReplaceImages();
+    initReplaceImageListeners();
 })();
 
 (() => {
-    initModal();
+    initModalListeners();
 })();
 
 (() => {
@@ -68,7 +68,7 @@ import { initSpoiler } from './components/spoiler';
     if (!(scrollableCases instanceof HTMLDivElement)) {
         return;
     }
-    slowInfiniteScroll(
+    initInfiniteScroll(
         scrollableCases,
         {
             direction: 'left',
@@ -86,7 +86,7 @@ import { initSpoiler } from './components/spoiler';
     if (!(scrollableCases instanceof HTMLDivElement)) {
         return;
     }
-    slowInfiniteScroll(
+    initInfiniteScroll(
         scrollableCases,
         {
             direction: 'left',
@@ -104,7 +104,7 @@ import { initSpoiler } from './components/spoiler';
     if (!(scrollableCases instanceof HTMLDivElement)) {
         return;
     }
-    slowInfiniteScroll(
+    initInfiniteScroll(
         scrollableCases,
         {
             direction: 'left',
@@ -135,7 +135,7 @@ import { initSpoiler } from './components/spoiler';
     if (!(scrollableTopVideos instanceof HTMLDivElement)) {
         return;
     }
-    const scrollController = slowInfiniteScroll(
+    const scrollController = initInfiniteScroll(
         scrollableTopVideos,
         {
             direction: 'left',
@@ -153,7 +153,7 @@ import { initSpoiler } from './components/spoiler';
     if (!(scrollableBottom instanceof HTMLDivElement)) {
         return;
     }
-    const scrollController = slowInfiniteScroll(
+    const scrollController = initInfiniteScroll(
         scrollableBottom,
         {
             direction: 'right',

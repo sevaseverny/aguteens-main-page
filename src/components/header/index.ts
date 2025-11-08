@@ -21,20 +21,34 @@ const classes = {
     lk: 'header__link_lk',
 };
 
-export const initHeader = () => {
+/**
+ * Инициализация событий для заголовка.
+ */
+export const initHeaderListeners = () => {
     const state = {
         isScrolled: false,
     };
 
-    document.addEventListener('scroll', () => {
+    /**
+     * Обработчик скролла. Изменяет состояние заголовка в зависимости от положения скролла.
+     */
+    const handleScroll = () => {
         const isScrolled = window.scrollY !== 0;
         if (isScrolled === state.isScrolled) {
             return;
         }
         state.isScrolled = isScrolled;
         render();
-    });
+    };
 
+    document.addEventListener('scroll', handleScroll);
+
+    /**
+     * Отрисовывает заголовок в зависимости от состояния.
+     * Если страница прокручена, то добавляет классы для изменения стиля заголовка.
+     * Если страница не прокручена, то удаляет классы для изменения стиля заголовка.
+     * Также изменяет размер логотипа в зависимости от положения скролла.
+     */
     const render = () => {
         const header = document.body.querySelector(`.${classes.header}`);
         const logo = document.body.querySelector(`.${classes.logo}`);
@@ -43,6 +57,9 @@ export const initHeader = () => {
         const family = document.body.querySelector(`.${classes.logoFamily}`);
         const forum = document.body.querySelector(`.${classes.logoForum}`);
 
+        /**
+         * Список элементов, которые нужно изменить при скролле. Каждый элемент имеет класс, который нужно добавить или удалить.
+         */
         const elements: {element: Element; scrollClass: string}[] = [
             { element: header, scrollClass: classes.headerScrolled},
             { element: logo, scrollClass: classes.logoScrolled },

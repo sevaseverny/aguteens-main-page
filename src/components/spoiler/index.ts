@@ -8,13 +8,26 @@ const classes = {
     contentOpened: 'spoiler__content_opened',
 };
 
+/**
+ * Инициализация спойлера.
+ *
+ * @param element
+ */
 export const initSpoiler = (
     element: HTMLDivElement,
 ) => {
+    /**
+     * Состояние компонента.
+     */
     const state = {
+        // Признак, что спойлер открыт.
         isOpened: false,
     };
 
+    /**
+     * Изменение состояния компонента.
+     * @param newState
+     */
     const setState = (newState: Partial<typeof state>) => {
         if (newState.isOpened !== state.isOpened) {
             state.isOpened = newState.isOpened;
@@ -22,6 +35,10 @@ export const initSpoiler = (
         }
     };
 
+    /**
+     * Обработчик клика по заголовку спойлера.
+     * @param event
+     */
     const handleToggleSpoiler = (event: MouseEvent) => {
         const { target } = event;
 
@@ -40,6 +57,9 @@ export const initSpoiler = (
 
     element.addEventListener('click', handleToggleSpoiler);
 
+    /**
+     * Перерисовка компонента.
+     */
     const rerender = (): void => {
         const content = element.querySelector(`.${classes.content}`);
         const title = element.querySelector(`.${classes.title}`);
