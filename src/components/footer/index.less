@@ -9,19 +9,19 @@
   &__blocks {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-    gap: 100px;
+    margin-bottom: calcrem(50);
+    gap: calcrem(100);
 
     .mobile-screen({
       flex-direction: column;
-      gap: 50px;
+      gap: calcrem(50);
     });
   }
 
 
   &__block {
-    width: calc(50% - 50px);
-    min-width: calc(50% - 50px);
+    width: calc(50% - calcrem(50));
+    min-width: calc(50% - calcrem(50));
 
     .mobile-screen({
       text-align: center;
@@ -31,7 +31,7 @@
   }
 
   &__block-title {
-    margin: 0 0 25px;
+    margin: 0 0 calcrem(25);
     font-family: var(--font-main);
     font-size: var(--font-size-xxl);
     font-style: normal;
@@ -41,7 +41,7 @@
 
   &__list {
     padding: 0;
-    margin: 0 0 40px;
+    margin: 0 0 calcrem(40);
     list-style: none;
 
     .mobile-screen({
@@ -51,10 +51,10 @@
     });
 
     &__item {
-      margin-bottom: 15px;
+      margin-bottom: calcrem(15);
 
       &__title {
-        margin: 0 0 5px;
+        margin: 0 0 calcrem(5);
         color: var(--font-color-light);
         font-family: var(--font-main);
         font-size: var(--font-size-l);
@@ -68,7 +68,7 @@
         font-size: var(--font-size-l);
         font-style: normal;
         font-weight: 400;
-        line-height: 100%; /* 18px */
+        line-height: 100%; /* calcrem(18) */
         text-decoration: none;
 
         &:hover {
@@ -87,9 +87,9 @@
   }
 
   &__payment-logo {
-    width: 90px;
-    height: 24px;
-    margin-bottom: 20px;
+    width: calcrem(90);
+    height: calcrem(24);
+    margin-bottom: calcrem(20);
     background-image: url("../../icons/mir-logo.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,7 +101,7 @@
     align-items: center;
 
     &__link {
-      margin-bottom: 20px;
+      margin-bottom: calcrem(20);
       font-family: var(--font-main);
       font-size: var(--font-size-xxl);
       font-weight: 700;
@@ -111,13 +111,13 @@
 
     &__icons {
       display: flex;
-      gap: 24px;
+      gap: calcrem(24);
     }
 
     &__icon {
       display: block;
-      width: 50px;
-      height: 50px;
+      width: calcrem(50);
+      height: calcrem(50);
       background-repeat: no-repeat;
       background-size: cover;
 

@@ -7,10 +7,10 @@
 
   &__link {
     display: flex;
-    width: 347px;
-    height: 171px;
+    width: calcrem(347);
+    height: calcrem(171);
     flex-direction: column;
-    padding: 20px 30px 30px;
+    padding: calcrem(20) calcrem(30) calcrem(30);
     border-radius: var(--border-radius-default);
     background: linear-gradient(107deg, rgb(32 32 32 / 80%) -1.68%, rgb(32 32 32 / 0%) 100%);
     color: var(--font-color-light);
@@ -23,13 +23,13 @@
     }
 
     .tablet-screen({
-      width: 420px;
+      width: calcrem(420);
     });
 
     .mobile-screen({
       box-sizing: border-box;
       width: 100%;
-      max-width: 420px;
+      max-width: calcrem(420);
     });
   }
 
@@ -44,7 +44,7 @@
     font-style: normal;
     font-weight: 550;
     letter-spacing: 4.8px;
-    line-height: 100%; /* 12px */
+    line-height: 100%; /* calcrem(12) */
   }
 
   &__price {
@@ -60,7 +60,7 @@
   }
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: calcrem(10);
     font-family: var(--font-main);
     font-size: var(--font-size-xxxl);
     font-style: normal;

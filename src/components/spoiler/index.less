@@ -10,7 +10,7 @@
     font-family: var(--font-light);
     font-size: var(--font-size-xl);
     font-weight: 550;
-    gap: 10px;
+    gap: calcrem(10);
     letter-spacing: 0;
     line-height: 120%;
     text-align: center;
@@ -18,8 +18,8 @@
 
     &::before {
       display: inline-block;
-      width: 32px;
-      height: 32px;
+      width: calcrem(32);
+      height: calcrem(32);
       box-sizing: border-box;
       background-color: var(--color-secondary);
       background-repeat: no-repeat;
@@ -30,7 +30,7 @@
       mask-repeat: no-repeat;
 
       .mobile-screen({
-        padding: 6px;
+        padding: calcrem(6);
       });
     }
 

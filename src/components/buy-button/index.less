@@ -2,44 +2,44 @@
 
 .buy-button {
   display: flex;
-  height: 95px;
+  height: calcrem(95);
   align-items: center;
-  padding: 0 30px 0 38px;
+  padding: 0 calcrem(30) 0 calcrem(38);
   border: none;
   border-radius: var(--border-radius-large);
   appearance: none;
   background: var(--color-danger);
-  box-shadow: 0 4px 54px 0 rgb(0 0 0 / 25%);
-  gap: 10px;
+  box-shadow: 0 calcrem(4) calcrem(54) 0 rgb(0 0 0 / 25%);
+  gap: calcrem(10);
   text-decoration: none;
 
   .mobile-screen({
-    height: 47px;
-    border-radius: 35px;
-    padding: 0 15px 0 19px;
+    height: calcrem(47);
+    border-radius: calcrem(35);
+    padding: 0 calcrem(15) 0 calcrem(19);
   });
 
   &__text {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 0 12px 22px;
-    border-left: 2px dashed #FFF;
+    padding: calcrem(15) 0 calcrem(12) calcrem(22);
+    border-left: calcrem(2) dashed #FFF;
     color: var(--font-color-light);
     font-family: var(--font-main);
     font-size: var(--font-size-xl);
     font-style: normal;
     font-weight: 550;
-    gap: 10px;
+    gap: calcrem(10);
     letter-spacing: -0.44px;
     line-height: 90%; /* 19.8px */
     text-align: left;
     text-transform: uppercase;
 
     .mobile-screen({
-      border-left: 1px dashed #FFF;
-      font-size: 11px;
-      padding: 7px 0 7px 7px;
+      border-left: calcrem(1) dashed #FFF;
+      font-size: calcrem(11);
+      padding: calcrem(7) 0 calcrem(7) calcrem(7);
     });
   }
 }

@@ -5,7 +5,7 @@
   overflow: hidden;
   flex-direction: column;
   border-radius: var(--border-radius-default);
-  gap: 2px;
+  gap: calcrem(2);
 
   &__question {
     position: relative;
@@ -13,7 +13,7 @@
     align-items: center;
     align-self: stretch;
     justify-content: space-between;
-    padding: 20px 20px 20px 30px;
+    padding: calcrem(20) calcrem(20) calcrem(20) calcrem(30);
     background: var(--color-primary);;
     color: var(--font-color-light);
     cursor: pointer;
@@ -25,21 +25,21 @@
 
     .mobile-screen({
       font-size: var(--font-size-m);
-      padding: 12px 10px 12px 20px;
+      padding: calcrem(12) calcrem(10) calcrem(12) calcrem(20);
     });
 
     &::after {
       display: block;
-      width: 20px;
-      height: 20px;
-      padding: 20px;
+      width: calcrem(20);
+      height: calcrem(20);
+      padding: calcrem(20);
       background-image: url("../../icons/down.svg");
       background-position: center;
       background-repeat: no-repeat;
       content: '';
 
       .mobile-screen({
-        padding: 6px;
+        padding: calcrem(6);
       });
     }
 
@@ -69,10 +69,10 @@
     });
 
     &__content {
-      padding: 20px 20px 20px 30px;
+      padding: calcrem(20) calcrem(20) calcrem(20) calcrem(30);
 
       .mobile-screen({
-        padding: 12px 10px 12px 20px;
+        padding: calcrem(12) calcrem(10) calcrem(12) calcrem(20);
       });
     }
 

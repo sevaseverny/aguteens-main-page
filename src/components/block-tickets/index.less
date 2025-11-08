@@ -6,15 +6,15 @@
     justify-content: space-between;
     margin: 0 auto;
     color: var(--font-color-dark);
-    gap: 20px;
+    gap: calcrem(20);
 
     .mobile-screen({
-      gap: 40px;
+      gap: calcrem(40);
     });
   }
 
   &__title {
-    margin-bottom: 90px;
+    margin-bottom: calcrem(90);
     font-family: var(--font-main);
     font-size: var(--font-size-xxxxl);
     font-style: normal;
@@ -27,8 +27,8 @@
   }
 
   &__text {
-    width: 429px;
-    margin-bottom: 90px;
+    width:  calcrem(429);
+    margin-bottom: calcrem(90);
     font-family: var(--font-light);
     font-size: var(--font-size-xxl);
     font-style: normal;
@@ -44,14 +44,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: calcrem(10);
   }
 
   &__more-tickets {
-    margin-top: 53px;
+    margin-top: calcrem(53);
   }
 
   &__spoiler-content {
-    margin-top: 53px;
+    margin-top: calcrem(53);
   }
 }

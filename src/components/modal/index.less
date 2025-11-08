@@ -24,52 +24,52 @@
 
   &__wrapper {
     position: relative;
-    width: 824px;
+    width: calcrem(824);
     max-width: 100%;
     margin: 0 auto;
 
     .tablet-screen({
       top: 0;
-      margin: 64px;
-      bottom: 100px;
+      margin: calcrem(64);
+      bottom: calcrem(100);
     });
   }
 
   &__dialog {
     .tablet-screen({
       overflow: scroll;
-      height: calc(100vh - 128px);
+      height: calc(100vh - calcrem(128));
     })
   }
 
   &__close {
     position: absolute;
-    top: -60px;
-    right: -88px;
+    top:  calcrem(-60);
+    right:  calcrem(-88);
     display: block;
-    width: 32px;
-    height: 32px;
+    width: calcrem(32);
+    height: calcrem(32);
     background-image: url("../../icons/x.svg");
     background-size: cover;
     cursor: pointer;
 
     .tablet-screen({
-      top: -17px;
-      right: -50px;
+      top:  calcrem(-17);
+      right:  calcrem(-50);
     });
   }
 
   &__control {
     position: absolute;
     z-index: 100;
-    top: calc(50% - 64px);
-    width: 64px;
-    height: 64px;
-    padding: 20px;
+    top: calc(50% - calcrem(64));
+    width: calcrem(64);
+    height: calcrem(64);
+    padding: calcrem(20);
     background-image: url("../../icons/down.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 64px;
+    background-size: calcrem(64);
     cursor: pointer;
     opacity: 0.5;
     .tablet-screen({
@@ -81,20 +81,20 @@
     }
 
     &_right {
-      right: -96px;
+      right:  calcrem(-96);
       transform: rotate(-90deg);
 
       .tablet-screen({
-        right: -64px;
+        right:  calcrem(-64);
       });
     }
 
     &_left {
-      left: -96px;
+      left:  calcrem(-96);
       transform: rotate(90deg);
 
       .tablet-screen({
-        left: -64px;
+        left:  calcrem(-64);
       });
     }
   }

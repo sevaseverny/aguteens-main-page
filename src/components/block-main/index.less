@@ -5,8 +5,8 @@
   color: var(--font-color-light);
 
   &__header {
-    width: 600px;
-    margin-bottom: 35px;
+    width: calcrem(600);
+    margin-bottom: calcrem(35);
     font-family: var(--font-heawy);
     font-size: var(--font-size-xxxxxxl);
     font-style: normal;
@@ -15,12 +15,12 @@
     line-height: 90%; /* 82.8px */
 
     .tablet-screen({
-      font-size: 64px;
+      font-size: calcrem(64);
       width: auto;
     });
 
     .mobile-screen({
-      font-size: 40px;
+      font-size: calcrem(40);
     });
   }
 
@@ -30,14 +30,14 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    padding: 90px 0 70px 210px;
-    gap: 30px;
+    padding: calcrem(90) 0 calcrem(70) calcrem(210);
+    gap: calcrem(30);
 
     .mobile-screen({
       box-sizing: border-box;
-      padding: 60px 0 70px 170px;
+      padding: calcrem(60) 0 calcrem(70) calcrem(170);
       flex-direction: column;
-      max-width: 360px;
+      max-width: calcrem(360);
     });
 
     &__count-wrapper {
@@ -48,13 +48,13 @@
 
     &__count{
       font-family: var(--font-oswald);
-      font-size: 56px;
+      font-size: calcrem(56);
       font-style: normal;
       font-weight: 600;
       line-height: normal;
 
       .mobile-screen({
-        font-size: 36px;
+        font-size: calcrem(36);
       });
     }
 
@@ -73,7 +73,7 @@
     }
 
     &__text {
-      width: 229px;
+      width: calcrem(229);
       font-family: var(--font-light);
       font-size: var(--font-size-xxl);
       font-style: normal;
@@ -91,9 +91,9 @@
 
   &__preview {
     display: flex;
-    gap: 69px;
+    gap: calcrem(69);
     .mobile-screen({
-      gap: 20px;
+      gap: calcrem(20);
     });
 
     &__button {

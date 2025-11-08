@@ -5,22 +5,22 @@
   flex-direction: column;
 
   &__top {
-    margin-bottom: 10px;
+    margin-bottom: calcrem(10);
   }
 
   &__cards {
     display: flex;
     overflow: hidden;
     flex-flow: row nowrap;
-    gap: 10px;
+    gap: calcrem(10);
   }
 
   &__card {
     position: relative;
     overflow: hidden;
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
+    width: calcrem(300);
+    min-width: calcrem(300);
+    height: calcrem(300);
     border-radius: var(--border-radius-default);
     background: lightgray 50% / cover no-repeat;
     background-size: cover;

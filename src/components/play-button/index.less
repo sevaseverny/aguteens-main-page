@@ -1,18 +1,18 @@
 @import url("../../common/adaptive");
 
 .play-button {
-  width: 64px;
-  height: 64px;
+  width: calcrem(64);
+  height: calcrem(64);
   border: none;
   appearance: none;
   background-color: #0000;
   background-image: url("../../icons/play.svg");
-  background-size: 64px;
+  background-size: calcrem(64);
   cursor: pointer;
 
   .mobile-screen({
-    height: 40px;
-    width: 40px;
-    background-size: 40px;
+    height: calcrem(40);
+    width: calcrem(40);
+    background-size: calcrem(40);
   });
 }

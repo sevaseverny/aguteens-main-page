@@ -2,15 +2,15 @@
 
 .block-offer {
   display: flex;
-  gap: 50px;
+  gap: calcrem(50);
 
   .mobile-screen({
     flex-direction: column;
-    gap: 30px;
+    gap: calcrem(30);
   });
 
   &__text {
-    width: 380px;
+    width: calcrem(380);
     color: var(--font-color-dark);
     font-family: HelveticaMedium, sans-serif;
     font-size: var(--font-size-xxxxxl);
@@ -28,24 +28,24 @@
   &__image {
     position: relative;
     z-index: 1;
-    height: 275px;
+    height: calcrem(275);
     flex-grow: 1;
-    border: 10px solid var(--color-secondary);
+    border: calcrem(10) solid var(--color-secondary);
     border-radius: var(--border-radius-default);
     background: url('../../images/2-block.png') lightgray 50% / cover no-repeat;
 
     .mobile-screen({
-      margin-left: 90px;
-      height: 223px;
-      border: 6px solid var(--color-secondary);
+      margin-left: calcrem(90);
+      height: calcrem(223);
+      border: calcrem(6) solid var(--color-secondary);
     });
 
     &__text {
       position: absolute;
-      top: -48.418px;
-      left: -80px;
-      width: 154px;
-      padding: 25px 30px;
+      top: caclrem(-48);
+      left: caclrem(-80);
+      width: caclrem(154);
+      padding: calcrem(25) calcrem(30);
       border-radius: var(--border-radius-default);
       background: var(--color-secondary);
       color: var(--font-color-light);
@@ -58,13 +58,13 @@
       .mobile-screen({
         box-sizing: border-box;
         font-size: var(--font-size-s);
-        width: 163px;
-        height: 98px;
+        width: calcrem(163);
+        height: calcrem(98);
         opacity: 1;
-        padding: 15px 20px;
+        padding: calcrem(15) calcrem(20);
         border-radius: var(--border-radius-default);
-        top: -10px;
-        left: -98px;
+        top: caclrem(-10);
+        left:  calcrem(-98);
         line-height: 120%;
       });
     }

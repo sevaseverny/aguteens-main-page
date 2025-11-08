@@ -14,13 +14,13 @@
   position: fixed;
   z-index: 200;
   width: 100%;
-  min-height: 300px;
+  min-height: calcrem(300);
   animation: fadeIn 2s ease-in-out forwards;
   background: #0000;
   transition: all 0.2s ease-in-out;
 
   &_scrolled {
-    min-height: 75px;
+    min-height: calcrem(75);
     backdrop-filter: blur(5px);
     background: rgb(219 25 51 / 80%);
     transition: all 0.4s ease-in-out;
@@ -30,11 +30,11 @@
     display: flex;
     max-width: 1024px;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 0 calcrem(100);
     margin: 0 auto;
 
     .mobile-screen({
-      padding: 0 20px;
+      padding: 0 calcrem(20);
     })
   }
 
@@ -43,117 +43,117 @@
 
     &__agu {
       position: absolute;
-      top: 130px;
-      left: -59px;
-      width: 138px;
-      height: 20px;
+      top: calcrem(130);
+      left:  calcrem(-59);
+      width: calcrem(138);
+      height: calcrem(20);
       background: url("../../icons/AGU.svg") no-repeat;
       background-size: contain;
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 26px;
-        width: 99px;
+        top: calcrem(26);
+        width: calcrem(99);
       }
 
       .mobile-screen({
-        top: 86px;
-        left: -8px;
-        width: 105px;
+        top: calcrem(86);
+        left:  calcrem(-8);
+        width: calcrem(105);
 
         &_scrolled {
-          top: 26px;
-          width: 99px;
-          left: 4px;
+          top: calcrem(26);
+          width: calcrem(99);
+          left: calcrem(4);
         }
       });
     }
 
     &__arcs {
       position: absolute;
-      top: 60px;
-      left: -27px;
-      width: 213px;
-      height: 213px;
+      top: calcrem(60);
+      left:  calcrem(-27);
+      width: calcrem(213);
+      height: calcrem(213);
       background-image: url("../../icons/arcs.svg");
       background-repeat: no-repeat;
       background-size: contain;
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 14px;
-        left: 24px;
-        height: 47px;
+        top: calcrem(14);
+        left: calcrem(24);
+        height: calcrem(47);
       }
 
       .mobile-screen({
-        top: 29px;
-        width: 149px;
-        height: 163px;
-        left: 10px;
+        top: calcrem(29);
+        width: calcrem(149);
+        height: calcrem(163);
+        left: calcrem(10);
 
         &_scrolled {
-          top: 14px;
-          left: 85px;
-          height: 47px;
+          top: calcrem(14);
+          left: calcrem(85);
+          height: calcrem(47);
         }
       });
     }
 
     &__family {
       position: absolute;
-      top: 153px;
+      top: calcrem(153);
       left: 0;
-      width: 76px;
-      height: 11px;
+      width: calcrem(76);
+      height: calcrem(11);
       background: url("../../icons/family.svg") no-repeat;
       background-size: contain;
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 43px;
-        left: -58px;
-        width: 50px;
+        top: calcrem(43);
+        left:  calcrem(-58);
+        width: calcrem(50);
       }
 
       .mobile-screen({
-        top: 103px;
-        left: 37px;
-        width: 58px;
+        top: calcrem(103);
+        left: calcrem(37);
+        width: calcrem(58);
 
         &_scrolled {
-          top: 43px;
-          left: 4px;
-          width: 46px;
+          top: calcrem(43);
+          left: calcrem(4);
+          width: calcrem(46);
         }
       });
     }
 
     &__forum {
       position: absolute;
-      top: 170px;
-      left: 29px;
-      width: 47px;
-      height: 11px;
+      top: calcrem(170);
+      left: calcrem(29);
+      width: calcrem(47);
+      height: calcrem(11);
       background: url("../../icons/forum.svg") no-repeat;
       background-size: contain;
       transition: all 0.3s linear;
 
       &_scrolled {
-        top: 43px;
-        left: -6px;
-        width: 30px;
+        top: calcrem(43);
+        left:  calcrem(-6);
+        width: calcrem(30);
       }
 
       .mobile-screen({
-        top: 114px;
-        left: 57px;
-        width: 36px;
+        top: calcrem(114);
+        left: calcrem(57);
+        width: calcrem(36);
 
         &_scrolled {
-          top: 43px;
-          left: 54px;
-          width: 29px;
+          top: calcrem(43);
+          left: calcrem(54);
+          width: calcrem(29);
         }
       });
     }
@@ -161,15 +161,15 @@
 
   &__links {
     display: flex;
-    height: 70px;
+    height: calcrem(70);
     align-items: center;
-    gap: 20px;
+    gap: calcrem(20);
   }
 
   &__link {
     display: block;
-    width: 30px;
-    height: 38px;
+    width: calcrem(30);
+    height: calcrem(38);
 
     &_menu {
       background: url("../../icons/burger.svg") no-repeat;

@@ -8,24 +8,24 @@
     max-width: 1024px;
     justify-content: space-between;
     margin: 0 auto;
-    gap: 20px;
+    gap: calcrem(20);
   }
 
   &__bottom {
     position: absolute;
     z-index: 100;
-    bottom: 20px;
+    bottom: calcrem(20);
     display: flex;
     width: 100%;
     justify-content: center;
 
     .mobile-screen({
-      bottom: 35px;
+      bottom: calcrem(35);
     });
   }
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: calcrem(60);
     color: var(--font-color-light);
     font-family: var(--font-main);
     font-size: var(--font-size-xxxxl);
@@ -35,7 +35,7 @@
 
     .mobile-screen({
       font-size: var(--font-size-xxxl);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 
@@ -43,7 +43,7 @@
     display: flex;
     overflow: hidden;
     flex-flow: row nowrap;
-    gap: 10px;
+    gap: calcrem(10);
 
     .mobile-screen({
       overflow-x: scroll;
@@ -53,9 +53,9 @@
   &__card {
     position: relative;
     overflow: hidden;
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
+    width: calcrem(300);
+    min-width: calcrem(300);
+    height: calcrem(300);
     border-radius: var(--border-radius-default);
     background: lightgray 50% / cover no-repeat;
     background-size: cover;

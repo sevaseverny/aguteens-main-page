@@ -2,7 +2,7 @@
 
 .block-faq {
   display: flex;
-  gap: 10px;
+  gap: calcrem(10);
 
   .tablet-screen({
     flex-direction: column;
@@ -10,8 +10,8 @@
   });
 
   &__image {
-    width: calc(50% - 5px);
-    height: 517.5px;
+    width: calc(50% - calcrem(5));
+    height: calcrem(517);
     flex: 1 0 0;
     border-radius: var(--border-radius-default) var(--border-radius-default) 0;
     background: lightgray 50% / cover no-repeat;
@@ -21,20 +21,20 @@
       height: auto;
       aspect-ratio: 1 / 1;
       border-radius: var(--border-radius-default);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 
   &__content {
     display: flex;
-    width: calc(50% - 5px);
+    width: calc(50% - calcrem(5));
     flex-direction: column;
     justify-content: center;
 
       &__title {
-        width: 300px;
-        padding-left: 70px;
-        margin-bottom: 50px;
+        width: calcrem(300);
+        padding-left: calcrem(70);
+        margin-bottom: calcrem(50);
         color: var(--font-color-dark);
         font-family: var(--font-main);
         font-size: var(--font-size-xxxxl);
@@ -44,7 +44,7 @@
 
         .mobile-screen({
           font-size: var(--font-size-xxxl);
-          margin-bottom: 30px;
+          margin-bottom: calcrem(30);
           padding-left: 0;
         })
       }

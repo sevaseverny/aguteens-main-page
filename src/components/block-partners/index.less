@@ -6,11 +6,11 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    gap: 40px;
+    gap: calcrem(40);
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: calcrem(50);
     font-family: var(--font-main);
     font-size: var(--font-size-xxxxl);
     font-style: normal;
@@ -19,30 +19,30 @@
 
     .mobile-screen({
       font-size: var(--font-size-xxxl);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 
   &__logo {
-    width: 257px;
-    height: 90px;
-    margin-bottom: 50px;
+    width: calcrem(257);
+    height: calcrem(90);
+    margin-bottom: calcrem(50);
     background-image: url("../../icons/malina-logo.svg");
     background-repeat: no-repeat;
     background-size: cover;
 
     .mobile-screen({
-      min-width: 130px;
-      width: 130px;
-      height: 45px;
-      margin-bottom: 40px;
+      min-width: calcrem(130);
+      width: calcrem(130);
+      height: calcrem(45);
+      margin-bottom: calcrem(40);
     });
   }
 
   &__summary {
     display: block;
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: calcrem(70);
     color: var(--font-color-dark);
     font-family: var(--font-light);
     font-size: var(--font-size-xxl);
@@ -52,12 +52,12 @@
 
     .mobile-screen({
       font-size: var(--font-size-m);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 
   &__faq-title {
-    margin-bottom: 50px;
+    margin-bottom: calcrem(50);
     color: var(--font-color-dark);
     font-family: var(--font-main);
     font-size: var(--font-size-xxxxl);
@@ -66,7 +66,7 @@
     line-height: 90%; /* 43.2px */
     .mobile-screen({
       font-size: var(--font-size-xxxl);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 }

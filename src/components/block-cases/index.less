@@ -6,15 +6,15 @@
     max-width: 1024px;
     justify-content: space-between;
     margin: 0 auto;
-    gap: 20px;
+    gap: calcrem(20);
 
     .mobile-screen({
-      gap: 80px;
+      gap: calcrem(80);
     });
   }
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: calcrem(60);
     color: var(--font-color-light);
     font-family: var(--font-main);
     font-size: var(--font-size-xxxxl);
@@ -24,13 +24,13 @@
 
     .mobile-screen({
       font-size: var(--font-size-xxxl);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 
   &__text {
-    width: 429px;
-    margin-bottom: 60px;
+    width:  calcrem(429);
+    margin-bottom: calcrem(60);
     color: var(--font-color-light);
     font-family: var(--font-light);
     font-size: var(--font-size-xxl);
@@ -40,7 +40,7 @@
 
     .mobile-screen({
       font-size: var(--font-size-m);
-      margin-bottom: 40px;
+      margin-bottom: calcrem(40);
     });
   }
 
@@ -48,10 +48,10 @@
     display: flex;
     overflow: hidden;
     flex-flow: row nowrap;
-    gap: 20px;
+    gap: calcrem(20);
 
     .mobile-screen({
-      gap: 10px;
+      gap: calcrem(10);
       overflow-x: scroll;
     })
   }
@@ -59,23 +59,23 @@
   &__card {
     position: relative;
     overflow: hidden;
-    width: 360px;
-    min-width: 360px;
-    height: 360px;
-    border: 10px solid #FFF;
+    width: calcrem(360);
+    min-width: calcrem(360);
+    height: calcrem(360);
+    border: calcrem(10) solid #FFF;
     border-radius: var(--border-radius-default);
     background: lightgray 50% / cover no-repeat;
     background-size: cover;
     cursor: pointer;
 
     .mobile-screen({
-      width: 240px;
-      height: 240px;
-      min-width: 240px;
+      width: calcrem(240);
+      height: calcrem(240);
+      min-width: calcrem(240);
     });
 
     &__title {
-      margin-bottom: 10px;
+      margin-bottom: calcrem(10);
       color: var(--font-color-light);
       font-family: var(--font-main);
       font-size: var(--font-size-xxxl);
@@ -106,7 +106,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      padding: 20px;
+      padding: calcrem(20);
       background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, #000 100%);
       color: var(--font-color-light);
     }
@@ -119,17 +119,17 @@
   &__modal {
     display: flex;
     color: var(--font-color-light);
-    gap: 53px;
+    gap: calcrem(53);
 
     .mobile-screen({
       flex-direction: column;
     });
 
     &__image {
-      width: 409px;
-      height: 409px;
-      border-radius: 36px;
-      margin-bottom: 40px;
+      width: calcrem(409);
+      height: calcrem(409);
+      border-radius: calcrem(36);
+      margin-bottom: calcrem(40);
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: cover;
@@ -142,7 +142,7 @@
     }
 
     &__title {
-      margin-bottom: 20px;
+      margin-bottom: calcrem(20);
       font-family: var(--font-main);
       font-size: var(--font-size-xxxxl);
       font-weight: 900;
@@ -152,7 +152,7 @@
 
     &__text {
       font-family: var(--font-light);
-      font-size: 21.6px;
+      font-size: var(--font-size-xl);
       font-weight: 400;
       letter-spacing: 0;
       line-height: 90%;

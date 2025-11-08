@@ -4,11 +4,11 @@
   position: relative;
   z-index: 2;
   display: flex;
-  min-height: 340px;
+  min-height: calcrem(340);
   justify-content: space-between;
 
   .mobile-screen({
-    min-height: 120px;
+    min-height: calcrem(120);
   });
 
   &__text {
@@ -19,16 +19,16 @@
     justify-content: center;
     color: var(--font-color-light);
     font-family: var(--font-main);
-    font-size: 80px;
+    font-size: calcrem(80);
     font-style: normal;
     font-weight: 900;
     letter-spacing: -1.6px;
-    line-height: 90%; /* 72px */
+    line-height: 90%; /* calcrem(72) */
 
     .mobile-screen({
       font-size: var(--font-size-xxxl);
-      width: 200px;
-      height: 124px;
+      width: calcrem(200);
+      height: calcrem(124);
     });
   }
 
