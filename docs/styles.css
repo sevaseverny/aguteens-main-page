@@ -413,7 +413,7 @@ html {
     display: block;
     width: 40rem;
     height: 40rem;
-    mask-size: -33.33333rem, -33.33333rem;
+    mask-size: 33.33333rem, 33.33333rem;
   }
 }
 .page__block_welcome {
@@ -702,8 +702,9 @@ html {
 }
 @media screen and (max-width: 767px) {
   .block-offer__text {
-    width: auto;
+    width: 17.2rem;
     font-size: var(--font-size-xxxl);
+    margin-bottom: 30px;
   }
 }
 .block-offer__image {
