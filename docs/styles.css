@@ -724,9 +724,9 @@ html {
 }
 .block-offer__image__text {
   position: absolute;
-  top: caclrem(-48);
-  left: caclrem(-80);
-  width: caclrem(154);
+  top: -3.2rem;
+  left: -5.33333rem;
+  width: 10.26667rem;
   padding: 1.66667rem 2rem;
   border-radius: var(--border-radius-default);
   background: var(--color-secondary);
@@ -1809,7 +1809,6 @@ html {
   }
 }
 .list__answer_opened {
-  height: auto;
   transition: height 0.3s ease-in-out;
 }
 

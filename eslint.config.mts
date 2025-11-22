@@ -73,5 +73,5 @@ export default defineConfig(
             '@typescript-eslint/restrict-plus-operands': 'error',
         },
     },
-    globalIgnores(['dist/']),
+    globalIgnores(['dist/', 'docs/']),
 );

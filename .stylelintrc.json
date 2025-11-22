@@ -1,12 +1,15 @@
 {
+  "customSyntax": "postcss-less",
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-idiomatic-order"
   ],
   "rules": {
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["/^const-/", "/.+-ruleset:$/"]
+      "ignoreAtRules": ["/^const-/", "/.+-ruleset:$/", "/^tablet-/", "/^mobile-/"]
     }],
-    "keyframes-name-pattern": [null]
+    "keyframes-name-pattern": [null],
+    "media-query-no-invalid": [null],
+    "function-no-unknown": [true, { "ignoreFunctions": ["calcrem"]}]
   }
 }

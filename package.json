@@ -54,6 +54,7 @@
     "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
-    "@types/less": "^3.0.8"
+    "@types/less": "^3.0.8",
+    "postcss-less": "^6.0.0"
   }
 }
